@@ -22,16 +22,24 @@ function Icon({ name }) {
       return <svg viewBox="0 0 24 24" {...common}><path d="M3 21h18" /><path d="M5 21V8l6 4V8l6 4V3h3v18" /><path d="M9 17h1" /><path d="M14 17h1" /></svg>;
     case "calendar":
       return <svg viewBox="0 0 24 24" {...common}><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4" /><path d="M8 2v4" /><path d="M3 10h18" /><path d="M8 14h.01" /><path d="M12 14h.01" /><path d="M16 14h.01" /><path d="M8 18h.01" /><path d="M12 18h.01" /></svg>;
+    case "clock":
+      return <svg viewBox="0 0 24 24" {...common}><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>;
     case "award":
-      return <svg viewBox="0 0 24 24" {...common}><circle cx="12" cy="8" r="5" /><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8" /><path d="m10 8 1.4 1.4L14.5 6" /></svg>;
+      return <svg viewBox="0 0 24 24" {...common}><circle cx="12" cy="8" r="7" /><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></svg>;
+    case "wrench":
+      return <svg viewBox="0 0 24 24" {...common}><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>;
     case "link":
       return <svg viewBox="0 0 24 24" {...common}><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1" /><path d="M14 11a5 5 0 0 0-7.1 0l-2 2a5 5 0 0 0 7.1 7.1l1.1-1.1" /></svg>;
     case "material":
       return <svg viewBox="0 0 24 24" {...common}><path d="M12 3 20 7v6c0 5-8 8-8 8s-8-3-8-8V7l8-4z" /><path d="m9 12 2 2 4-5" /></svg>;
     case "handshake":
       return <svg viewBox="0 0 24 24" {...common}><path d="m11 17 2 2a2.8 2.8 0 0 0 4 0l4-4" /><path d="m14 14 3 3" /><path d="M3 12 8 7l4 4" /><path d="m2 14 6 6" /><path d="M7 8l2-2a3 3 0 0 1 4.2 0l.8.8" /><path d="m22 12-5-5-4.5 4.5a2.1 2.1 0 0 1-3 0" /></svg>;
+    case "thumbs-up":
+      return <svg viewBox="0 0 24 24" {...common}><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" /></svg>;
     case "network":
       return <svg viewBox="0 0 24 24" {...common}><circle cx="7" cy="7" r="3" /><circle cx="17" cy="7" r="3" /><circle cx="12" cy="17" r="3" /><path d="m9.5 8.7 1.6 5.5" /><path d="m14.5 8.7-1.6 5.5" /><path d="M10 7h4" /></svg>;
+    case "briefcase":
+      return <svg viewBox="0 0 24 24" {...common}><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>;
     case "globe":
       return <svg viewBox="0 0 24 24" {...common}><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>;
     case "lock":
@@ -174,20 +182,13 @@ function AboutPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  const values = [
-    ["Precision Manufacturing", "Components and assemblies are built for dependable SF6 gas handling performance."],
-    ["Quality Documentation", "Inspection, testing and calibration practices support critical industrial projects."],
-    ["Customer Support", "Application guidance and service assistance help clients select the right solution."],
-    ["Custom Engineering", "Equipment and accessories can be configured around specific site requirements."]
-  ];
-
   const highlights = [
-    ["calendar", "30+", "Years of", "Experience"],
+    ["clock", "30+", "Years of", "Experience"],
     ["award", "Premium", "Quality", "Manufacturing"],
-    ["link", "Tough", "Reliable &", "Construction"],
-    ["material", "Corrosion", "Resistant", "Materials"],
-    ["handshake", "100%", "Client", "Satisfaction"],
-    ["network", "Industry", "Experts with", "Deep Knowledge"]
+    ["wrench", "Tough", "Reliable &", "Construction"],
+    ["shield", "Corrosion", "Resistant", "Materials"],
+    ["thumbs-up", "100%", "Client", "Satisfaction"],
+    ["briefcase", "Industry", "Experts with", "Deep Knowledge"]
   ];
 
   const purposeCards = [
@@ -278,34 +279,56 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="about-values-section">
+        <section className="about-nabl-section">
           <div className="container">
-            <div className="about-section-heading">
-              <p className="section-label">WHAT DRIVES US</p>
-              <h2>Manufacturing with Process, Care and Accountability</h2>
-            </div>
-            <div className="about-values-grid">
-              {values.map(([title, text], index) => (
-                <article className="about-value-card animate-slide-bottom" style={{ animationDelay: `${index * 0.08}s` }} key={title}>
-                  <span className="about-value-icon"><Icon name={index === 0 ? "factory" : index === 1 ? "shield" : index === 2 ? "check" : "settings"} /></span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="about-process-section">
-          <div className="container about-process-inner">
-            <div>
-              <p className="section-label">OUR APPROACH</p>
-              <h2>From Requirement to Reliable Field Operation</h2>
-            </div>
-            <div className="about-process-list">
-              <div><span>01</span><strong>Understand Application</strong><p>We study gas handling, pressure, capacity and site requirements.</p></div>
-              <div><span>02</span><strong>Engineer the Solution</strong><p>Our team configures equipment, accessories and documentation needs.</p></div>
-              <div><span>03</span><strong>Test and Support</strong><p>Products are checked before dispatch with after-sales assistance available.</p></div>
+            <div className="about-nabl-card animate-slide-bottom">
+              <div className="about-nabl-content">
+                <p className="about-nabl-label">CALIBRATION LABORATORY / CERTIFICATIONS</p>
+                <h2 className="about-nabl-title">NABL ACCREDITED CALIBRATION LABORATORY</h2>
+                <p className="about-nabl-desc">Mechfield operates an advanced NABL Accredited Calibration Laboratory equipped with modern standards, precision instruments and qualified experts to provide reliable and traceable calibration services.</p>
+                
+                <div className="about-nabl-badges">
+                  <div className="about-nabl-badge-card">
+                    <div className="about-nabl-badge-visual">
+                      <svg viewBox="0 0 48 48" style={{ width: "100%", height: "100%" }}>
+                        <path d="M24 4L6 10v12c0 11.27 7.68 21.36 18 22 10.32-.64 18-10.73 18-22V10L24 4z" fill="rgba(10, 111, 147, 0.08)" stroke="#0a6f93" strokeWidth="2" strokeLinejoin="round" />
+                        <circle cx="24" cy="22" r="11" fill="#ffffff" stroke="#ff6f2b" strokeWidth="1.5" />
+                        <text x="24" y="25.5" textAnchor="middle" fill="#06223d" fontSize="8.5" fontWeight="900" fontFamily="Montserrat">NABL</text>
+                        <path d="M20 34l3 3 6-6" fill="none" stroke="#0a6f93" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    <div className="about-nabl-badge-text">
+                      <strong>NABL ACCREDITED</strong>
+                      <span>Certificate No. CC-2296</span>
+                    </div>
+                  </div>
+                  <div className="about-nabl-badge-card">
+                    <div className="about-nabl-badge-visual">
+                      <svg viewBox="0 0 48 48" style={{ width: "100%", height: "100%" }}>
+                        <path d="M24 4L6 10v12c0 11.27 7.68 21.36 18 22 10.32-.64 18-10.73 18-22V10L24 4z" fill="rgba(255, 111, 43, 0.06)" stroke="#ff5f1f" strokeWidth="2" strokeLinejoin="round" />
+                        <circle cx="24" cy="22" r="11" fill="#ffffff" stroke="#0a6f93" strokeWidth="1.5" />
+                        <text x="24" y="25.5" textAnchor="middle" fill="#06223d" fontSize="9.5" fontWeight="900" fontFamily="Montserrat">ISO</text>
+                        <path d="M20 34l3 3 6-6" fill="none" stroke="#ff5f1f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    <div className="about-nabl-badge-text">
+                      <strong>ISO 9001:2015</strong>
+                      <span>Certified Quality System</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="about-nabl-images">
+                <div className="about-nabl-img-wrapper">
+                  <img src="/assets/category/Measuring Instruments.png" alt="Calibration tools and pressure standards" />
+                </div>
+                <div className="about-nabl-img-wrapper">
+                  <img src="/assets/category/NABL Calibration Services.png" alt="NABL accredited calibration laboratory workspace" />
+                </div>
+                <div className="about-nabl-img-wrapper">
+                  <img src="/assets/products/product-4.jpg" alt="Benchtop precision calibration calibrator" />
+                </div>
+              </div>
             </div>
           </div>
         </section>

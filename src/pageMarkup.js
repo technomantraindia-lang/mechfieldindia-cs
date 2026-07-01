@@ -1,0 +1,697 @@
+/**
+ * Homepage HTML markup for Mechfield India.
+ * Rendered by HomePage.jsx via dangerouslySetInnerHTML.
+ * Edit section-by-section using the HTML comments below.
+ */
+const pageMarkup = `
+  <!-- ========== Top Bar: phone, email, location, social ========== -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <a href="tel:+919714518402">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          +91 9714518402
+        </a>
+        <a href="mailto:admin@mechfieldindia.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          admin@mechfieldindia.com
+        </a>
+      </div>
+      <div class="top-bar-center">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Vadodara, Gujarat, India
+      </div>
+      <div class="top-bar-social">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Site Header: logo, navigation, quote button ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Mechfield India home">
+        <img src="assets/logo.png" alt="Mechfield India">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="active" href="#">Home</a>
+        <a href="pages/about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="pages/prodcut.html" class="nav-dropdown-link has-dropdown">Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <p class="nav-dropdown-label">Product Categories</p>
+            <a href="pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
+            <a href="pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
+            <a href="pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
+            <a href="pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a>
+            <a href="pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
+            <a href="pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
+            <a href="pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
+            <a href="pages/prodcut.html?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
+            <a href="pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
+          </div>
+        </div>
+        <a href="pages/certificates.html">Certificates &amp; Awards</a>
+        <a href="pages/clients.html">Clients</a>
+        <a href="pages/contact.html">Contact Us</a>
+      </nav>
+      <a class="btn btn-quote" href="#">Request a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== Hero Banner ========== -->
+    <section class="hero" aria-label="Premium SF6 Gas Handling Equipment">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/banera/home1.png" alt="">
+      </div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
+          <h1>
+            <span class="h1-line"><span class="h1-navy">Premium</span> <span class="h1-orange">SF6 Gas</span></span>
+            <span class="h1-line"><span class="h1-navy">Handling</span> <span class="h1-orange">Equipment</span></span>
+          </h1>
+          <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="pages/prodcut.html">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="btn btn-outline" href="#">Request a Quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+          <div class="hero-points">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Reliable Performance</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Global Standards</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Trusted by Experts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trust Stats: ISO, NABL, experience ========== -->
+    <section class="trust-section" aria-label="Company highlights">
+      <div class="trust-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="stats">
+          <article class="stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <div class="stat-content">
+              <p class="stat-title"><span class="stat-navy">Since</span> <span class="stat-orange">1993</span></p>
+              <span class="stat-desc">Delivering Trust for Over 3 Decades</span>
+            </div>
+          </article>
+          <article class="stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></svg></div>
+            <div class="stat-content">
+              <p class="stat-title"><span class="stat-line"><span class="stat-navy">ISO 9001:2015</span> <span class="stat-orange">Certified</span></span></p>
+              <span class="stat-desc">Quality You Can Rely On</span>
+            </div>
+          </article>
+          <article class="stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2"/><path d="M8.5 2h7M7 16h10"/></svg></div>
+            <div class="stat-content">
+              <p class="stat-title">
+                <span class="stat-line"><span class="stat-navy">NABL Accredited</span></span>
+                <span class="stat-line"><span class="stat-orange">Laboratory</span></span>
+              </p>
+              <span class="stat-desc">Government Approved Calibration Lab</span>
+            </div>
+          </article>
+          <article class="stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8M2 21v-2a4 4 0 0 1 3-3.9M8 3.1a4 4 0 0 0 0 7.8"/></svg></div>
+            <div class="stat-content">
+              <p class="stat-title">
+                <span class="stat-line"><span class="stat-navy">Industrial Gas</span></span>
+                <span class="stat-line"><span class="stat-navy">Handling</span> <span class="stat-orange">Experts</span></span>
+              </p>
+              <span class="stat-desc">Reliable. Safe. Precise.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== About Us ========== -->
+    <section class="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-media">
+          <div class="about-image-stack">
+            <div class="about-image-bg" aria-hidden="true"></div>
+            <div class="about-image-frame">
+              <img src="assets/company.jpg" alt="Mechfield Technologies office building">
+              <div class="about-year-pill">
+                <strong>30+</strong>
+                <span>Years of Excellence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-panel">
+          <p class="section-label">About Us</p>
+          <h2 id="about-heading">
+            <span class="about-title-line"><span class="h2-navy">Mechfield</span> <span class="h2-orange">Technologies</span> <span class="h2-navy">Pvt. Ltd.</span></span>
+          </h2>
+          <p class="about-lead">Established in 1993, we design, develop and manufacture speciality gas handling products trusted by industries worldwide.</p>
+          <p>Our comprehensive range includes Regulators, Valves, Flash Back Arrestors, Laboratory Furniture and SF6 Gas Handling Equipment — built for longer service life, corrosion resistance and tough construction.</p>
+          <div class="about-chips">
+            <span>ISO Certified</span>
+            <span>NABL Laboratory</span>
+            <span>Global Exports</span>
+          </div>
+          <div class="about-stats">
+            <div class="about-stat">
+              <strong>30+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="about-stat">
+              <strong>500+</strong>
+              <span>Happy Customers</span>
+            </div>
+            <div class="about-stat">
+              <strong>30+</strong>
+              <span>Countries Served</span>
+            </div>
+            <div class="about-stat">
+              <strong>24/7</strong>
+              <span>Support &amp; Service</span>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sm" href="#">Learn More About Us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Product Categories (What We Offer) ========== -->
+    <section class="products" aria-labelledby="product-categories-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">What We Offer</p>
+          <h2 id="product-categories-heading">Our <strong>Product Categories</strong></h2>
+        </div>
+        <div class="product-grid">
+          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-recovery-transfer-units">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/SF6 Gas Recovery &amp; Transfer Units.png" alt="SF6 Gas Recovery and Transfer Units"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>SF6 Gas Recovery &amp; Transfer Units</h3>
+                <p>Recovery, transfer and purification systems</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-filling-device">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/SF6 Gas Filling Devices.png" alt="SF6 Gas Filling Devices"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>SF6 Gas Filling Device</h3>
+                <p>Precise filling for switchgear systems</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-storage-tank">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/SF6 Gas Storage Tanks.png" alt="SF6 Gas Storage Tanks"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>SF6 Gas Storage Tank</h3>
+                <p>Safe and durable gas storage solutions</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=measuring-instruments">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/Measuring Instruments.png" alt="Measuring Instruments"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>Measuring Instruments</h3>
+                <p>Accurate gas measurement and monitoring</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=gas-connectors-manifolds">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/Gas Connectors &amp; Manifolds.png" alt="Gas Connectors and Manifolds"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>Gas Connectors &amp; Manifolds</h3>
+                <p>High-pressure connectors and manifolds</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-leak-detector">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/SF6 Gas Leak Detectors.png" alt="SF6 Gas Leak Detectors"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>SF6 Gas Leak Detector</h3>
+                <p>Advanced leak detection technology</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=portable-recovery-vacuum-units">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/Filters &amp; Vacuum Units.png" alt="Filters and Vacuum Units"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>Portable Recovery / Vacuum Units</h3>
+                <p>Portable recovery and vacuum pump systems</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=nabl-calibration-laboratory-services">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/category/NABL Calibration Services.png" alt="NABL Calibration Services"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>NABL Calibration Laboratory Services</h3>
+                <p>Certified calibration and testing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="products-actions">
+          <a class="btn btn-primary" href="pages/prodcut.html">View All Categories <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why Choose Mechfield (3D model + cards) ========== -->
+    <section class="why-choose" aria-labelledby="why-choose-heading">
+      <div class="why-choose-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Our Strengths</p>
+          <h2 id="why-choose-heading">Why Choose <strong>Mechfield</strong></h2>
+          <p class="section-desc">Three decades of engineering excellence, certified quality and dedicated support make us a trusted partner for SF6 and industrial gas handling solutions.</p>
+        </div>
+        <div class="why-layout">
+          <div class="why-visual">
+            <div class="why-image-frame">
+              <div class="sf6-model-viewer" data-sf6-model aria-label="Interactive 3D SF6 gas handling equipment model">
+                <img class="sf6-model-fallback" src="assets/sf6-equipment.png" alt="SF6 gas handling equipment manufactured by Mechfield">
+              </div>
+              <div class="why-badge">
+                <strong>ISO 9001:2015</strong>
+                <span>Certified Quality</span>
+              </div>
+            </div>
+            <div class="why-visual-stats">
+              <div><strong>30+</strong><span>Years</span></div>
+              <div><strong>30+</strong><span>Countries</span></div>
+              <div><strong>NABL</strong><span>Accredited</span></div>
+            </div>
+          </div>
+          <div class="why-grid">
+          <article class="why-card">
+            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <h3>Advanced Technology</h3>
+            <p>Cutting-edge engineering for superior performance.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.8-4 4.1.9 5.6L12 15.8 7.1 17.5l.9-5.6-4-4.1 5.6-.8L12 2z"/></svg></span>
+            <h3>Safety First</h3>
+            <p>Designed with global safety standards and protocols.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2"/><path d="M8.5 2h7M7 16h10"/></svg></span>
+            <h3>Custom Solutions</h3>
+            <p>Tailored systems to meet your unique requirements.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <h3>Uncompromising Quality</h3>
+            <p>Built with precision and superior quality checks.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0z"/><path d="m3 21 8.6-8.6"/><path d="M11 5 5 11v4h4l6-6"/></svg></span>
+            <h3>Reliable Support</h3>
+            <p>24/7 expert support to maintain operations.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <h3>Global Presence</h3>
+            <p>Trusted by industries across 30+ countries.</p>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Industries We Serve ========== -->
+    <section class="industries" aria-labelledby="industries-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Sectors We Support</p>
+          <h2 id="industries-heading">Industries We <strong>Serve</strong></h2>
+          <p class="section-desc">Delivering reliable SF6 gas handling and speciality gas equipment to critical sectors across power, infrastructure and industrial operations.</p>
+        </div>
+        <div class="industries-grid">
+          <article class="industry-card">
+            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+            <h3>Power &amp; Utilities</h3>
+            <p>SF6 equipment for substations, switchgear maintenance and transmission networks.</p>
+          </article>
+          <article class="industry-card">
+            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V10l7-6 7 6v10"/><path d="M9 20v-6h6v6"/></svg></span>
+            <h3>Electrical Infrastructure</h3>
+            <p>Gas handling systems for electrical contractors and EPC project teams.</p>
+          </article>
+          <article class="industry-card">
+            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+            <h3>Manufacturing Plants</h3>
+            <p>Industrial gas regulators, valves and handling units for production facilities.</p>
+          </article>
+          <article class="industry-card">
+            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M9 21V11M15 21V11"/></svg></span>
+            <h3>Oil &amp; Gas Sector</h3>
+            <p>High-pressure connectors, manifolds and safety equipment for demanding environments.</p>
+          </article>
+          <article class="industry-card">
+            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span>
+            <h3>Railways &amp; Metro</h3>
+            <p>Dependable gas handling solutions for rail electrification and metro projects.</p>
+          </article>
+          <article class="industry-card">
+            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2"/><path d="M8.5 2h7"/></svg></span>
+            <h3>Research &amp; Laboratories</h3>
+            <p>Laboratory furniture, calibration services and precision measuring instruments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Client Testimonials Carousel ========== -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="testimonials-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-heading testimonials-heading">
+          <p class="section-label">Client Feedback</p>
+          <h2 id="testimonials-heading">What Our <strong>Clients Say</strong></h2>
+          <p class="testimonials-sub">Trusted by power utilities, industrial plants and engineering teams across India for reliable SF6 gas handling solutions.</p>
+        </div>
+        <div class="testimonial-slider-wrap">
+          <div class="testimonial-slider" aria-roledescription="carousel" aria-label="Client testimonials">
+            <div class="testimonial-track">
+              <div class="testimonial-slide">
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.17 6A5.001 5.001 0 0 0 2 11v7h7v-7a4 4 0 0 1 4-4h1V6H7.17zM18.17 6A5.001 5.001 0 0 0 13 11v7h7v-7a4 4 0 0 1 4-4h1V6h-6.83z"/></svg></span>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <blockquote><p>Mechfield's SF6 recovery units have significantly improved our maintenance workflow. Reliable equipment and excellent after-sales support across India.</p></blockquote>
+                  <footer class="testimonial-author">
+                    <div class="testimonial-avatar" aria-hidden="true">RK</div>
+                    <div><strong>Rajesh Kumar</strong><span>Maintenance Head, Power Grid Sector</span></div>
+                  </footer>
+                </article>
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.17 6A5.001 5.001 0 0 0 2 11v7h7v-7a4 4 0 0 1 4-4h1V6H7.17zM18.17 6A5.001 5.001 0 0 0 13 11v7h7v-7a4 4 0 0 1 4-4h1V6h-6.83z"/></svg></span>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <blockquote><p>We have been using their gas filling devices and leak detectors for over 5 years. Quality is consistent and their team understands industrial requirements very well.</p></blockquote>
+                  <footer class="testimonial-author">
+                    <div class="testimonial-avatar" aria-hidden="true">PS</div>
+                    <div><strong>Priya Sharma</strong><span>Project Engineer, Electrical Utilities</span></div>
+                  </footer>
+                </article>
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.17 6A5.001 5.001 0 0 0 2 11v7h7v-7a4 4 0 0 1 4-4h1V6H7.17zM18.17 6A5.001 5.001 0 0 0 13 11v7h7v-7a4 4 0 0 1 4-4h1V6h-6.83z"/></svg></span>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <blockquote><p>From consultation to delivery, the experience was professional. Their calibration services and timely response make them a trusted partner for our operations.</p></blockquote>
+                  <footer class="testimonial-author">
+                    <div class="testimonial-avatar" aria-hidden="true">AM</div>
+                    <div><strong>Amit Mehta</strong><span>Operations Manager, Industrial Plant</span></div>
+                  </footer>
+                </article>
+              </div>
+              <div class="testimonial-slide">
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.17 6A5.001 5.001 0 0 0 2 11v7h7v-7a4 4 0 0 1 4-4h1V6H7.17zM18.17 6A5.001 5.001 0 0 0 13 11v7h7v-7a4 4 0 0 1 4-4h1V6h-6.83z"/></svg></span>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <blockquote><p>Their SF6 storage tanks and vacuum units are built to last. We appreciate the sturdy construction and safety-focused design for our substation projects.</p></blockquote>
+                  <footer class="testimonial-author">
+                    <div class="testimonial-avatar" aria-hidden="true">VS</div>
+                    <div><strong>Vikram Singh</strong><span>Substation Engineer, Transmission Division</span></div>
+                  </footer>
+                </article>
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.17 6A5.001 5.001 0 0 0 2 11v7h7v-7a4 4 0 0 1 4-4h1V6H7.17zM18.17 6A5.001 5.001 0 0 0 13 11v7h7v-7a4 4 0 0 1 4-4h1V6h-6.83z"/></svg></span>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <blockquote><p>Measuring instruments and connectors supplied by Mechfield meet global standards. On-time delivery and technical guidance helped us complete projects faster.</p></blockquote>
+                  <footer class="testimonial-author">
+                    <div class="testimonial-avatar" aria-hidden="true">SP</div>
+                    <div><strong>Sneha Patel</strong><span>Technical Manager, Manufacturing Unit</span></div>
+                  </footer>
+                </article>
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.17 6A5.001 5.001 0 0 0 2 11v7h7v-7a4 4 0 0 1 4-4h1V6H7.17zM18.17 6A5.001 5.001 0 0 0 13 11v7h7v-7a4 4 0 0 1 4-4h1V6h-6.83z"/></svg></span>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <blockquote><p>NABL calibration support from Mechfield gives us confidence in our equipment accuracy. A dependable partner for long-term industrial gas handling needs.</p></blockquote>
+                  <footer class="testimonial-author">
+                    <div class="testimonial-avatar" aria-hidden="true">DJ</div>
+                    <div><strong>Deepak Joshi</strong><span>Director, Electrical Contracting Firm</span></div>
+                  </footer>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-dots" role="tablist" aria-label="Testimonial slides">
+            <button type="button" class="testimonial-dot is-active" aria-label="Testimonials 1 to 3" aria-selected="true"></button>
+            <button type="button" class="testimonial-dot" aria-label="Testimonials 4 to 6" aria-selected="false"></button>
+          </div>
+        </div>
+        <div class="testimonial-trust">
+          <div class="testimonial-trust-item"><strong>30+</strong><span>Years Experience</span></div>
+          <div class="testimonial-trust-item"><strong>500+</strong><span>Happy Clients</span></div>
+          <div class="testimonial-trust-item"><strong>30+</strong><span>Countries Served</span></div>
+          <div class="testimonial-trust-item"><strong>ISO</strong><span>Certified Quality</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ + Contact CTA Card ========== -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="container faq-layout">
+        <div class="faq-main">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q">What types of SF6 gas handling equipment do you manufacture?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>We manufacture SF6 gas recovery and transfer units, filling devices, storage tanks, leak detectors, filters, vacuum units, connectors, manifolds and related accessories for power and electrical infrastructure.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q">Do you provide installation and after-sales support?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Yes. We offer installation guidance, operator training, preventive maintenance support and spare parts assistance across India through our technical team.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q">Are your products ISO certified?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Our manufacturing processes follow international quality standards. We maintain ISO certification and supply equipment trusted by utilities and industrial clients nationwide.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q">Can I request a customized solution for my project?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Absolutely. Share your capacity, pressure rating and application details and our engineers will recommend or customize the right SF6 handling solution for your site.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q">Do you offer calibration services?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Yes. We provide certified calibration and testing services for gas handling instruments and related equipment through our calibration laboratory.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <aside class="faq-cta" aria-label="Contact our experts">
+          <div class="faq-cta-visual">
+            <img src="assets/sf6-equipment.png" alt="SF6 gas handling equipment">
+          </div>
+          <div class="faq-cta-body">
+            <h3>Have more questions?</h3>
+            <p>Our experts are here to help you.</p>
+            <a class="faq-cta-btn" href="#contact">Contact Us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========== Contact Form + Info ========== -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Get In Touch</p>
+          <h2 id="contact-heading">Contact <strong>Us</strong></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-left">
+            <div class="contact-visual">
+              <img src="assets/company.jpg" alt="Mechfield Technologies facility, Vadodara">
+              <div class="contact-visual-caption">
+                <strong>Visit Our Facility</strong>
+                <span>Vadodara, Gujarat, India</span>
+              </div>
+            </div>
+            <div class="contact-info">
+            <div class="contact-info-card">
+              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <h3>Our Location</h3>
+                <p>49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Vadodara-391243, Gujarat, India.</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <div>
+                <h3>Phone</h3>
+                <p>
+                  <a href="tel:+919825998958">+91 9825998958</a><br>
+                  <a href="tel:+919601604735">+91 9601604735</a><br>
+                  <a href="tel:+919714518402">+91 9714518402</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <div>
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:admin@mechfieldindia.com">admin@mechfieldindia.com</a><br>
+                  <a href="mailto:sales@mechfieldindia.com">sales@mechfieldindia.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <div>
+                <h3>Working Hours</h3>
+                <p>Mon – Sat: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+              </div>
+            </div>
+            </div>
+          </div>
+          <form class="contact-form" action="#" method="post">
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <label class="form-field">
+                <span>Full Name</span>
+                <input type="text" name="name" placeholder="Your name" required>
+              </label>
+              <label class="form-field">
+                <span>Phone Number</span>
+                <input type="tel" name="phone" placeholder="+91 00000 00000" required>
+              </label>
+            </div>
+            <label class="form-field">
+              <span>Email Address</span>
+              <input type="email" name="email" placeholder="you@company.com" required>
+            </label>
+            <label class="form-field">
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="Product inquiry / Quote request">
+            </label>
+            <label class="form-field">
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send Message <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Site Footer ========== -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <section class="footer-brand">
+          <img src="assets/logo.png" alt="Mechfield India" class="footer-logo">
+          <p class="footer-about">Established in 1993 — manufacturing and supplying Regulators, Valves, Gas Regulators, Flash Back Arrestors and Laboratory Furniture trusted by industries worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </section>
+
+        <section class="footer-col">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/about.html">About Us</a></li>
+            <li><a href="/pages/certificates.html">Certificates &amp; Awards</a></li>
+            <li><a href="/pages/prodcut.html">Products</a></li>
+            <li><a href="/pages/clients.html">Clients</a></li>
+            <li><a href="/pages/contact.html">Contact Us</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-col footer-contact">
+          <h2 class="footer-heading">Contact Us</h2>
+          <address class="footer-contact-list">
+            <div class="footer-contact-item">
+              <span class="footer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span>49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <span>
+                <a href="tel:+919825998958">+91 9825998958</a><br>
+                <a href="tel:+919601604735">+91 9601604735</a><br>
+                <a href="tel:+919714518402">+91 9714518402</a>
+              </span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span>
+                <a href="mailto:admin@mechfieldindia.com">admin@mechfieldindia.com</a><br>
+                <a href="mailto:sales@mechfieldindia.com">sales@mechfieldindia.com</a>
+              </span>
+            </div>
+          </address>
+        </section>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>Copyright &copy;2026 mechfieldindia</p>
+        <p>Powered by technomantraindia</p>
+      </div>
+    </div>
+  </footer>`;
+
+export default pageMarkup;

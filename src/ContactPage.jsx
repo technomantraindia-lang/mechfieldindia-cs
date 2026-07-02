@@ -140,170 +140,170 @@ function ContactPage() {
           <div className="container">
             <div className="contact-main-wrapper animate-slide-bottom">
               <div className="contact-main-grid">
-              
-              {/* Left Side: Contact Details */}
-              <div className="contact-info-container">
-                <div className="contact-section-tag">
-                  <span className="tag-line"></span>
-                  <span className="tag-text">GET IN TOUCH</span>
+
+                {/* Left Side: Contact Details */}
+                <div className="contact-info-container">
+                  <div className="contact-section-tag">
+                    <span className="tag-line"></span>
+                    <span className="tag-text">GET IN TOUCH</span>
+                  </div>
+                  <h2 className="contact-title">Let's Start a Conversation</h2>
+                  <div className="contact-title-wave" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <p className="contact-desc">
+                    Fill out the form or contact us directly using the details below. We look forward to hearing from you.
+                  </p>
+
+                  <div className="contact-cards-stack">
+
+                    {/* Phone Card */}
+                    <div className="contact-info-card">
+                      <div className="card-icon-wrapper">
+                        <Icon name="phone" />
+                      </div>
+                      <div className="card-details">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+919825998958">+91 98259 98958</a></p>
+                        <p><a href="tel:+919601604735">+91 96016 04735</a></p>
+                        <p><a href="tel:+919714518402">+91 97145 18402</a></p>
+                        <span className="card-action">Call for urgent support</span>
+                      </div>
+                    </div>
+
+                    {/* Email Card */}
+                    <div className="contact-info-card">
+                      <div className="card-icon-wrapper">
+                        <Icon name="mail" />
+                      </div>
+                      <div className="card-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:admin@mechfieldindia.com">admin@mechfieldindia.com</a></p>
+                        <p><a href="mailto:sales@mechfieldindia.com">sales@mechfieldindia.com</a></p>
+                        <span className="card-action">Send specifications or drawings</span>
+                      </div>
+                    </div>
+
+                    {/* Office Address Card */}
+                    <div className="contact-info-card">
+                      <div className="card-icon-wrapper">
+                        <Icon name="pin" />
+                      </div>
+                      <div className="card-details">
+                        <h3>Office Address</h3>
+                        <p>49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Dist. Vadodara - 391243, Gujarat, India.</p>
+                        <span className="card-action">Open for vendor and client visits</span>
+                      </div>
+                    </div>
+
+                    {/* Working Hours Card */}
+                    <div className="contact-info-card">
+                      <div className="card-icon-wrapper">
+                        <Icon name="clock" />
+                      </div>
+                      <div className="card-details">
+                        <h3>Working Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        <span className="card-action">Schedule visits in advance</span>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
-                <h2 className="contact-title">Let's Start a Conversation</h2>
-                <div className="contact-title-wave" aria-hidden="true">
-                  <span></span><span></span><span></span>
-                </div>
-                <p className="contact-desc">
-                  Fill out the form or contact us directly using the details below. We look forward to hearing from you.
-                </p>
 
-                <div className="contact-cards-stack">
-                  
-                  {/* Phone Card */}
-                  <div className="contact-info-card">
-                    <div className="card-icon-wrapper">
-                      <Icon name="phone" />
-                    </div>
-                    <div className="card-details">
-                      <h3>Phone</h3>
-                      <p><a href="tel:+919825998958">+91 98259 98958</a></p>
-                      <p><a href="tel:+919601604735">+91 96016 04735</a></p>
-                      <p><a href="tel:+919714518402">+91 97145 18402</a></p>
-                      <span className="card-action">Call for urgent support</span>
-                    </div>
-                  </div>
-
-                  {/* Email Card */}
-                  <div className="contact-info-card">
-                    <div className="card-icon-wrapper">
-                      <Icon name="mail" />
-                    </div>
-                    <div className="card-details">
-                      <h3>Email</h3>
-                      <p><a href="mailto:admin@mechfieldindia.com">admin@mechfieldindia.com</a></p>
-                      <p><a href="mailto:sales@mechfieldindia.com">sales@mechfieldindia.com</a></p>
-                      <span className="card-action">Send specifications or drawings</span>
-                    </div>
-                  </div>
-
-                  {/* Office Address Card */}
-                  <div className="contact-info-card">
-                    <div className="card-icon-wrapper">
-                      <Icon name="pin" />
-                    </div>
-                    <div className="card-details">
-                      <h3>Office Address</h3>
-                      <p>49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Dist. Vadodara - 391243, Gujarat, India.</p>
-                      <span className="card-action">Open for vendor and client visits</span>
-                    </div>
-                  </div>
-
-                  {/* Working Hours Card */}
-                  <div className="contact-info-card">
-                    <div className="card-icon-wrapper">
-                      <Icon name="clock" />
-                    </div>
-                    <div className="card-details">
-                      <h3>Working Hours</h3>
-                      <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
-                      <p>Sunday: Closed</p>
-                      <span className="card-action">Schedule visits in advance</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              {/* Right Side: Message Form Box */}
-              <div className="contact-form-container">
-                <div className="form-inner-box">
-                  <div className="form-header">
-                    <div className="form-icon-circle">
-                      <Icon name="pencil" />
-                    </div>
-                    <div>
-                      <h2 className="form-title">Send Us a Message</h2>
-                      <div className="form-title-wave"></div>
-                      <p className="form-subtitle">Our team will get back to you as soon as possible.</p>
-                    </div>
-                  </div>
-
-                  <form className="message-form" onSubmit={handleFormSubmit}>
-                    <div className="form-row">
-                      <div className="form-group">
-                        <label htmlFor="firstName">First Name *</label>
-                        <input type="text" id="firstName" placeholder="Your first name" required />
+                {/* Right Side: Message Form Box */}
+                <div className="contact-form-container">
+                  <div className="form-inner-box">
+                    <div className="form-header">
+                      <div className="form-icon-circle">
+                        <Icon name="pencil" />
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="lastName">Last Name *</label>
-                        <input type="text" id="lastName" placeholder="Your last name" required />
+                      <div>
+                        <h2 className="form-title">Send Us a Message</h2>
+                        <div className="form-title-wave"></div>
+                        <p className="form-subtitle">Our team will get back to you as soon as possible.</p>
                       </div>
                     </div>
 
-                    <div className="form-row">
-                      <div className="form-group">
-                        <label htmlFor="email">Email Address *</label>
-                        <input type="email" id="email" placeholder="your@email.com" required />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="phone">Phone Number *</label>
-                        <input type="tel" id="phone" placeholder="+91 98765 43210" required />
-                      </div>
-                    </div>
-
-                    {inquiryProduct && (
+                    <form className="message-form" onSubmit={handleFormSubmit}>
                       <div className="form-row">
                         <div className="form-group">
-                          <label htmlFor="productName">Product Name</label>
-                          <input type="text" id="productName" value={inquiryProduct} readOnly />
+                          <label htmlFor="firstName">First Name *</label>
+                          <input type="text" id="firstName" placeholder="Your first name" required />
                         </div>
-                        {inquiryCategory && (
+                        <div className="form-group">
+                          <label htmlFor="lastName">Last Name *</label>
+                          <input type="text" id="lastName" placeholder="Your last name" required />
+                        </div>
+                      </div>
+
+                      <div className="form-row">
+                        <div className="form-group">
+                          <label htmlFor="email">Email Address *</label>
+                          <input type="email" id="email" placeholder="your@email.com" required />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="phone">Phone Number *</label>
+                          <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+                        </div>
+                      </div>
+
+                      {inquiryProduct && (
+                        <div className="form-row">
                           <div className="form-group">
-                            <label htmlFor="productCategory">Category</label>
-                            <input type="text" id="productCategory" value={inquiryCategory} readOnly />
+                            <label htmlFor="productName">Product Name</label>
+                            <input type="text" id="productName" value={inquiryProduct} readOnly />
                           </div>
-                        )}
+                          {inquiryCategory && (
+                            <div className="form-group">
+                              <label htmlFor="productCategory">Category</label>
+                              <input type="text" id="productCategory" value={inquiryCategory} readOnly />
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      <div className="form-group">
+                        <label htmlFor="subject">Subject *</label>
+                        <input type="text" id="subject" placeholder="How can we help you?" defaultValue={defaultSubject} required />
                       </div>
-                    )}
 
-                    <div className="form-group">
-                      <label htmlFor="subject">Subject *</label>
-                      <input type="text" id="subject" placeholder="How can we help you?" defaultValue={defaultSubject} required />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="message">Message *</label>
-                      <textarea id="message" rows="5" placeholder="Type your message here..." defaultValue={defaultMessage} required></textarea>
-                    </div>
-
-                    <div className="form-footer">
-                      <button type="submit" className="btn btn-orange-fill form-submit-btn">
-                        SEND MESSAGE <Icon name="chevron" />
-                      </button>
-                      <div className="form-security-note">
-                        <Icon name="lock" />
-                        <span>Your information is safe with us.</span>
+                      <div className="form-group">
+                        <label htmlFor="message">Message *</label>
+                        <textarea id="message" rows="5" placeholder="Type your message here..." defaultValue={defaultMessage} required></textarea>
                       </div>
-                    </div>
-                  </form>
 
-                  <div className="form-bottom-tags">
-                    <span>INQUIRY / SERVICES</span>
-                    <span>PARTNERSHIPS</span>
-                    <span>GENERAL SUPPORT</span>
+                      <div className="form-footer">
+                        <button type="submit" className="btn btn-orange-fill form-submit-btn">
+                          SEND MESSAGE <Icon name="chevron" />
+                        </button>
+                        <div className="form-security-note">
+                          <Icon name="lock" />
+                          <span>Your information is safe with us.</span>
+                        </div>
+                      </div>
+                    </form>
+
+                    <div className="form-bottom-tags">
+                      <span>INQUIRY / SERVICES</span>
+                      <span>PARTNERSHIPS</span>
+                      <span>GENERAL SUPPORT</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Location & Map Section */}
         <section className="contact-presence-section">
           <div className="container">
             <div className="presence-main-wrapper animate-slide-bottom" style={{ animationDelay: '0.2s' }}>
               <div className="presence-grid">
-                
+
                 {/* Left Side: Address Details */}
                 <div className="presence-details-column">
                   <div className="contact-section-tag">
@@ -330,10 +330,10 @@ function ContactPage() {
                     </div>
                   </div>
 
-                  <a 
-                    href="https://maps.google.com/?q=Aatmiya+Brookfieldz+Industrial+Park+Vadodara" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href="https://maps.google.com/?q=Aatmiya+Brookfieldz+Industrial+Park+Vadodara"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-orange-fill presence-directions-btn"
                   >
                     Get Directions <Icon name="chevron" />
@@ -349,14 +349,14 @@ function ContactPage() {
                       <span>NH-48, near Por</span>
                     </div>
                   </div>
-                  <iframe 
+                  <iframe
                     title="Mechfield India Location Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.9961671987523!2d73.1818296760599!3d22.183204946452815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcb08bf098251%3A0xb3debb98d413346e!2sAatmiya%20Brookfieldz%20Industrial%20Park!5e0!3m2!1sen!2sin!4v1719825000000!5m2!1sen!2sin"
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0, borderRadius: '16px', minHeight: '380px', display: 'block' }} 
-                    allowFullScreen="" 
-                    loading="lazy" 
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, borderRadius: '16px', minHeight: '380px', display: 'block' }}
+                    allowFullScreen=""
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
@@ -387,7 +387,7 @@ function ContactPage() {
               <ul className="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/pages/about.html">About Us</a></li>
-                <li><a href="/pages/certificates.html">Certificates &amp; Awards</a></li>
+                <li><a href="/pages/certificates.html">Certificates</a></li>
                 <li><a href="/pages/prodcut.html">Products</a></li>
                 <li><a href="/pages/clients.html">Clients</a></li>
                 <li><a href="/pages/contact.html">Contact Us</a></li>

@@ -634,7 +634,7 @@ function Footer() {
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
               <li><a href="/pages/about.html">About Us</a></li>
-              <li><a href="/pages/certificates.html">Certificates & Awards</a></li>
+              <li><a href="/pages/certificates.html">Certificates</a></li>
               <li><a href="/pages/prodcut.html">Products</a></li>
               <li><a href="/pages/clients.html">Clients</a></li>
               <li><a href="/pages/contact.html">Contact Us</a></li>

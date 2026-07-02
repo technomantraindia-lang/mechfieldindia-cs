@@ -171,8 +171,8 @@ function ClientPage() {
                   const anims = ["animate-slide-left", "animate-slide-top", "animate-slide-bottom", "animate-slide-right"];
                   const animClass = anims[index % 4];
                   return (
-                    <div 
-                      key={item.name} 
+                    <div
+                      key={item.name}
                       className={`client-logo-card ${animClass}`}
                       style={{ animationDelay: `${index * 0.08}s` }}
                     >
@@ -191,8 +191,8 @@ function ClientPage() {
                   const anims = ["animate-slide-left", "animate-slide-top", "animate-slide-bottom", "animate-slide-right"];
                   const animClass = anims[index % 4];
                   return (
-                    <div 
-                      key={item.name} 
+                    <div
+                      key={item.name}
                       className={`client-logo-card ${animClass}`}
                       style={{ animationDelay: `${index * 0.08}s` }}
                     >
@@ -245,7 +245,7 @@ function ClientPage() {
               <ul className="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/pages/about.html">About Us</a></li>
-                <li><a href="/pages/certificates.html">Certificates &amp; Awards</a></li>
+                <li><a href="/pages/certificates.html">Certificates</a></li>
                 <li><a href="/pages/prodcut.html">Products</a></li>
                 <li><a href="/#contact">Contact Us</a></li>
               </ul>

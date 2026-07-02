@@ -145,7 +145,7 @@ function Footer() {
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
               <li><a href="/pages/about.html">About Us</a></li>
-              <li><a href="/pages/certificates.html">Certificates &amp; Awards</a></li>
+              <li><a href="/pages/certificates.html">Certificates</a></li>
               <li><a href="/pages/prodcut.html">Products</a></li>
               <li><a href="/pages/clients.html">Clients</a></li>
               <li><a href="/pages/contact.html">Contact Us</a></li>
@@ -400,7 +400,7 @@ function AboutPage() {
                 <p className="about-nabl-label">CALIBRATION LABORATORY / CERTIFICATIONS</p>
                 <h2 className="about-nabl-title">NABL ACCREDITED CALIBRATION LABORATORY</h2>
                 <p className="about-nabl-desc">Mechfield operates an advanced NABL Accredited Calibration Laboratory equipped with modern standards, precision instruments and qualified experts to provide reliable and traceable calibration services.</p>
-                
+
                 <div className="about-nabl-badges">
                   <div className="about-nabl-badge-card">
                     <div className="about-nabl-badge-visual">

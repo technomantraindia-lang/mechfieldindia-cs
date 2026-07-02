@@ -580,83 +580,154 @@ const pageMarkup = `
     <!-- ========== Contact Form + Info ========== -->
     <section class="contact-section" id="contact" aria-labelledby="contact-heading">
       <div class="container">
+        
+        <!-- Section Heading -->
         <div class="section-heading">
           <p class="section-label">Get In Touch</p>
           <h2 id="contact-heading">Contact <strong>Us</strong></h2>
         </div>
+
         <div class="contact-grid">
+          
+          <!-- Left Column -->
           <div class="contact-left">
-            <div class="contact-visual">
+            
+            <!-- Visit Facility Image Card -->
+            <div class="facility-image-card">
               <img src="assets/company.jpg" alt="Mechfield Technologies facility, Vadodara">
-              <div class="contact-visual-caption">
-                <strong>Visit Our Facility</strong>
-                <span>Vadodara, Gujarat, India</span>
+              <div class="facility-card-overlay">
+                <div class="facility-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="facility-card-text">
+                  <strong>Visit Our Facility</strong>
+                  <span>Vadodara, Gujarat, India</span>
+                </div>
               </div>
             </div>
-            <div class="contact-info">
-            <div class="contact-info-card">
-              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <div>
-                <h3>Our Location</h3>
-                <p>49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Vadodara-391243, Gujarat, India.</p>
+            
+            <!-- 2x2 Info Grid -->
+            <div class="contact-info-grid">
+              
+              <!-- Address Card -->
+              <div class="contact-detail-card">
+                <div class="detail-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="detail-content">
+                  <h4>ADDRESS</h4>
+                  <p>49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Vadodara-391243, Gujarat, India.</p>
+                </div>
               </div>
-            </div>
-            <div class="contact-info-card">
-              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-              <div>
-                <h3>Phone</h3>
-                <p>
-                  <a href="tel:+919825998958">+91 9825998958</a><br>
-                  <a href="tel:+919601604735">+91 9601604735</a><br>
-                  <a href="tel:+919714518402">+91 9714518402</a>
-                </p>
+              
+              <!-- Phone Card -->
+              <div class="contact-detail-card">
+                <div class="detail-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                </div>
+                <div class="detail-content">
+                  <h4>PHONE</h4>
+                  <p>
+                    <a href="tel:+919825998958">+91 9825998958</a><br>
+                    <a href="tel:+919601604735">+91 9601604735</a><br>
+                    <a href="tel:+919714518402">+91 9714518402</a>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="contact-info-card">
-              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <div>
-                <h3>Email</h3>
-                <p>
-                  <a href="mailto:admin@mechfieldindia.com">admin@mechfieldindia.com</a><br>
-                  <a href="mailto:sales@mechfieldindia.com">sales@mechfieldindia.com</a>
-                </p>
+              
+              <!-- Email Card -->
+              <div class="contact-detail-card">
+                <div class="detail-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="detail-content">
+                  <h4>EMAIL</h4>
+                  <p>
+                    <a href="mailto:admin@mechfieldindia.com">admin@mechfieldindia.com</a><br>
+                    <a href="mailto:sales@mechfieldindia.com">sales@mechfieldindia.com</a>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="contact-info-card">
-              <span class="contact-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
-              <div>
-                <h3>Working Hours</h3>
-                <p>Mon – Sat: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+              
+              <!-- Working Hours Card -->
+              <div class="contact-detail-card">
+                <div class="detail-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="detail-content">
+                  <h4>WORKING HOURS</h4>
+                  <p>Mon – Sat: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+                </div>
               </div>
-            </div>
+              
             </div>
           </div>
-          <form class="contact-form" action="#" method="post">
-            <h3>Send Us a Message</h3>
-            <div class="form-row">
-              <label class="form-field">
-                <span>Full Name</span>
-                <input type="text" name="name" placeholder="Your name" required>
-              </label>
-              <label class="form-field">
-                <span>Phone Number</span>
-                <input type="tel" name="phone" placeholder="+91 00000 00000" required>
-              </label>
+          
+          <!-- Right Column: Form Box -->
+          <div class="premium-form-container">
+            
+            <div class="premium-form-header">
+              <span class="premium-title-bar"></span>
+              <div>
+                <h3 class="premium-form-title">Send Us a Message</h3>
+                <p class="premium-form-subtitle">Fill in the details and our team will get back to you.</p>
+              </div>
             </div>
-            <label class="form-field">
-              <span>Email Address</span>
-              <input type="email" name="email" placeholder="you@company.com" required>
-            </label>
-            <label class="form-field">
-              <span>Subject</span>
-              <input type="text" name="subject" placeholder="Product inquiry / Quote request">
-            </label>
-            <label class="form-field">
-              <span>Message</span>
-              <textarea name="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">Send Message <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></button>
-          </form>
+            
+            <form class="premium-message-form" action="#" method="post">
+              <div class="form-double-row">
+                <div class="premium-form-field">
+                  <label>FULL NAME</label>
+                  <div class="input-with-icon">
+                    <span class="field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                  </div>
+                </div>
+                <div class="premium-form-field">
+                  <label>PHONE NUMBER</label>
+                  <div class="input-with-icon">
+                    <span class="field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="premium-form-field">
+                <label>EMAIL ADDRESS</label>
+                <div class="input-with-icon">
+                  <span class="field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                  <input type="email" name="email" placeholder="Enter your email address" required>
+                </div>
+              </div>
+              
+              <div class="premium-form-field">
+                <label>SUBJECT</label>
+                <div class="input-with-icon">
+                  <span class="field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+                  <input type="text" name="subject" placeholder="Enter subject of your inquiry" required>
+                </div>
+              </div>
+              
+              <div class="premium-form-field">
+                <label>MESSAGE</label>
+                <div class="input-with-icon align-top">
+                  <span class="field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+                  <textarea name="message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                </div>
+              </div>
+              
+              <button class="premium-submit-btn" type="submit">
+                <span>SEND MESSAGE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              
+              <div class="privacy-subtext">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11 11 13 15 9"/></svg>
+                <span>We respect your privacy. Your information is safe with us.</span>
+              </div>
+            </form>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -681,7 +752,7 @@ const pageMarkup = `
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/pages/about.html">About Us</a></li>
-            <li><a href="/pages/certificates.html">Certificates &amp; Awards</a></li>
+            <li><a href="/pages/certificates.html">Certificates</a></li>
             <li><a href="/pages/prodcut.html">Products</a></li>
             <li><a href="/pages/clients.html">Clients</a></li>
             <li><a href="/pages/contact.html">Contact Us</a></li>

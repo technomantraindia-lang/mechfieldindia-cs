@@ -301,7 +301,7 @@ function CertificatePage() {
               <ul className="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/pages/about.html">About Us</a></li>
-                <li><a href="/pages/certificates.html">Certificates &amp; Awards</a></li>
+                <li><a href="/pages/certificates.html">Certificates</a></li>
                 <li><a href="/pages/prodcut.html">Products</a></li>
                 <li><a href="/#contact">Contact Us</a></li>
               </ul>

@@ -688,6 +688,21 @@ const pageMarkup = `
           </ul>
         </section>
 
+        <section class="footer-col">
+          <h2 class="footer-heading">Product Categories</h2>
+          <ul class="footer-links">
+            <li><a href="/pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
+            <li><a href="/pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
+            <li><a href="/pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
+            <li><a href="/pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a></li>
+            <li><a href="/pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
+            <li><a href="/pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
+            <li><a href="/pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
+            <li><a href="/pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
+            <li><a href="/pages/prodcut.html?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
+          </ul>
+        </section>
+
         <section class="footer-col footer-contact">
           <h2 class="footer-heading">Contact Us</h2>
           <address class="footer-contact-list">

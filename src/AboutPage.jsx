@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import hirenDirectorImage from "../assets/directer/Mr. HIREN PATEL.png";
+import ramnikDirectorImage from "../assets/directer/Mr. RAMNIK PATEL.png";
 
 function Icon({ name }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" };
@@ -52,6 +54,14 @@ function Icon({ name }) {
       return <svg viewBox="0 0 24 24" {...common}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-5" /></svg>;
     case "settings":
       return <svg viewBox="0 0 24 24" {...common}><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1A2 2 0 1 1 7.1 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1A2 2 0 1 1 19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.1a2 2 0 1 1 0 4H21a1.7 1.7 0 0 0-1.6 1z" /></svg>;
+    case "users":
+      return <svg viewBox="0 0 24 24" {...common}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+    case "chart":
+      return <svg viewBox="0 0 24 24" {...common}><path d="M3 3v18h18" /><path d="m7 15 4-4 3 3 5-7" /><path d="M18 7h1v1" /></svg>;
+    case "drafting":
+      return <svg viewBox="0 0 24 24" {...common}><path d="M4 21 14.5 3.5a2 2 0 0 1 3 2.2L7 21" /><path d="M5 16h6" /><path d="M9 9h6" /><path d="M15 14l5 5" /><path d="m18 16 2 3-3-2" /></svg>;
+    case "clipboard":
+      return <svg viewBox="0 0 24 24" {...common}><path d="M9 5h6" /><path d="M9 12h6" /><path d="M9 16h4" /><path d="M10 3h4a2 2 0 0 1 2 2v1H8V5a2 2 0 0 1 2-2z" /><rect x="5" y="5" width="14" height="16" rx="2" /></svg>;
     case "check":
       return <svg viewBox="0 0 24 24" {...common}><path d="m20 6-11 11-5-5" /></svg>;
     default:
@@ -197,6 +207,30 @@ function AboutPage() {
     ["lock", "Our Commitment", "To maintain dependable manufacturing standards, transparent service and long-term partnerships with every customer we serve."]
   ];
 
+  const directors = [
+    {
+      name: "Mr. HIREN PATEL",
+      subtitle: "B. E. ELECTRICAL",
+      age: "55",
+      image: hirenDirectorImage,
+      text: "Industrial experience of 13 years with JYOTI LTD, ABB LTD and ADITYA BIRLA PROJECTS in heavy rotating electrical machines, erection, commissioning, 3D design and application based equipment for industrial plants."
+    },
+    {
+      name: "Mr. RAMNIK PATEL",
+      subtitle: "",
+      age: "44",
+      image: ramnikDirectorImage,
+      text: "Industrial experience of 27 years in mechanical workshop operations as proprietor, manufacturing machined components and assemblies for pressure regulating valves, isolation valves, manifold systems, hydraulic pumps and related industrial equipment."
+    }
+  ];
+
+  const togethernessItems = [
+    ["calendar", "Company started in 1993, with Mr. Hiren Patel joining the firm in 2013."],
+    ["chart", "Running the company together since 2013 with steady operational focus."],
+    ["users", "Company growth guided by combined initiative and teamwork."],
+    ["settings", "Development strengthened in Design, Production and Testing."]
+  ];
+
   return (
     <div className="about-page">
       <TopBar />
@@ -275,6 +309,71 @@ function AboutPage() {
                   <p>{text}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="director-detail-section" aria-labelledby="director-detail-heading">
+          <div className="director-bg-linework" aria-hidden="true"></div>
+          <div className="container director-detail-inner">
+            <div className="director-section-heading animate-slide-bottom">
+              <p><span></span>Director Detail<span></span></p>
+              <h2 id="director-detail-heading">Leadership Behind Mech<span>field</span></h2>
+              <strong>Experienced leadership driving design, production, quality, and long-term growth.</strong>
+            </div>
+
+            <div className="director-card-grid">
+              {directors.map((director, index) => (
+                <article className="director-card animate-slide-bottom" style={{ animationDelay: `${index * 0.08}s` }} key={director.name}>
+                  <div className="director-portrait">
+                    <img src={director.image} alt={director.name} />
+                  </div>
+                  <div className="director-info">
+                    <h3>{director.name}</h3>
+                    {director.subtitle && <p className="director-subtitle">{director.subtitle}</p>}
+                    <span className="director-rule" aria-hidden="true"></span>
+                    <p className="director-bio">{director.text}</p>
+                  </div>
+                  <div className="director-age" aria-label={`${director.age} years`}>
+                    {director.age}
+                  </div>
+                  <div className="director-machine-sketch" aria-hidden="true"></div>
+                </article>
+              ))}
+            </div>
+
+            <div className="togetherness-panel animate-slide-bottom">
+              <div className="togetherness-title">
+                <span></span>
+                <i><Icon name="handshake" /></i>
+                <h3>Togetherness</h3>
+                <span></span>
+              </div>
+              <div className="togetherness-track">
+                {togethernessItems.map(([icon, text]) => (
+                  <article className="togetherness-item" key={text}>
+                    <span className="togetherness-icon"><Icon name={icon} /></span>
+                    <p>{text}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="responsibility-row">
+                <h4>Responsibilities under :</h4>
+                <div className="responsibility-grid">
+                  <div className="responsibility-item">
+                    <span><Icon name="drafting" /></span>
+                    <p><strong>Mr. Hiren Patel -</strong> Design, Development, Costing and after sales/ service activities.</p>
+                  </div>
+                  <div className="responsibility-item">
+                    <span><Icon name="clipboard" /></span>
+                    <p><strong>Mr. Ramnik Patel -</strong> Legal liabilities, Administrative policies, production, Quality matter and Logistics.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="director-authority-note">
+                <span><Icon name="shield" /></span>
+                <strong>Both the directors are authorized to take all decisions for organization.</strong>
+              </div>
             </div>
           </div>
         </section>

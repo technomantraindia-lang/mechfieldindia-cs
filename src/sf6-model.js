@@ -16,7 +16,7 @@ export function initSf6Model() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
   camera.position.set(6.5, 3.55, 7.25);
-  camera.lookAt(-0.18, 0.42, 0);
+  camera.lookAt(0.18, 0.42, 0);
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -27,7 +27,7 @@ export function initSf6Model() {
 
   const model = new THREE.Group();
   model.rotation.y = -0.42;
-  model.position.x = -0.18;
+  model.position.x = 0.18;
   model.scale.setScalar(0.84);
   scene.add(model);
 
@@ -181,7 +181,7 @@ export function initSf6Model() {
     const height = viewer.clientHeight || 420;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    camera.lookAt(-0.18, 0.42, 0);
+    camera.lookAt(0.18, 0.42, 0);
     renderer.setSize(width, height, false);
   };
 

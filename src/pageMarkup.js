@@ -292,9 +292,14 @@ const pageMarkup = `
       <div class="why-choose-bg" aria-hidden="true"></div>
       <div class="container">
         <div class="section-heading">
-          <p class="section-label">Our Strengths</p>
-          <h2 id="why-choose-heading">Why Choose <strong>Mechfield</strong></h2>
-          <p class="section-desc">Three decades of engineering excellence, certified quality and dedicated support make us a trusted partner for SF6 and industrial gas handling solutions.</p>
+          <p class="section-label">WHY CHOOSE</p>
+          <h2 id="why-choose-heading">MECHFIELD</h2>
+          <p class="section-desc-visible">Engineered for precision. Built for reliability. Trusted for decades.</p>
+          <div class="why-divider" aria-hidden="true">
+            <span></span>
+            <span class="dot"></span>
+            <span></span>
+          </div>
         </div>
         <div class="why-layout">
           <div class="why-visual">
@@ -302,48 +307,71 @@ const pageMarkup = `
               <div class="sf6-model-viewer" data-sf6-model aria-label="Interactive 3D SF6 gas handling equipment model">
                 <img class="sf6-model-fallback" src="assets/sf6-equipment.png" alt="SF6 gas handling equipment manufactured by Mechfield">
               </div>
-              <div class="why-badge">
-                <strong>ISO 9001:2015</strong>
-                <span>Certified Quality</span>
-              </div>
-            </div>
-            <div class="why-visual-stats">
-              <div><strong>30+</strong><span>Years</span></div>
-              <div><strong>30+</strong><span>Countries</span></div>
-              <div><strong>NABL</strong><span>Accredited</span></div>
             </div>
           </div>
           <div class="why-grid">
-          <article class="why-card">
-            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-            <h3>Advanced Technology</h3>
-            <p>Cutting-edge engineering for superior performance.</p>
-          </article>
-          <article class="why-card">
-            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.8-4 4.1.9 5.6L12 15.8 7.1 17.5l.9-5.6-4-4.1 5.6-.8L12 2z"/></svg></span>
-            <h3>Safety First</h3>
-            <p>Designed with global safety standards and protocols.</p>
-          </article>
-          <article class="why-card">
-            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2"/><path d="M8.5 2h7M7 16h10"/></svg></span>
-            <h3>Custom Solutions</h3>
-            <p>Tailored systems to meet your unique requirements.</p>
-          </article>
-          <article class="why-card">
-            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <h3>Uncompromising Quality</h3>
-            <p>Built with precision and superior quality checks.</p>
-          </article>
-          <article class="why-card">
-            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0z"/><path d="m3 21 8.6-8.6"/><path d="M11 5 5 11v4h4l6-6"/></svg></span>
-            <h3>Reliable Support</h3>
-            <p>24/7 expert support to maintain operations.</p>
-          </article>
-          <article class="why-card">
-            <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-            <h3>Global Presence</h3>
-            <p>Trusted by industries across 30+ countries.</p>
-          </article>
+            <article class="why-card">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <text x="12" y="14.5" font-size="6.5" font-weight="900" font-family="Montserrat, system-ui, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">30+</text>
+                </svg>
+              </span>
+              <h3>30+ Years Experience</h3>
+              <p>Decades of expertise in gas handling solutions across industries.</p>
+            </article>
+            <article class="why-card">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="9" r="3" />
+                  <path d="M9 5V3M9 15v-2M5 9H3M15 9h-2M6.17 6.17L4.76 4.76M13.24 13.24l-1.41-1.41M6.17 11.83l-1.41 1.41M13.24 4.76l-1.41 1.41" />
+                  <circle cx="17" cy="17" r="2.5" />
+                  <path d="M17 13.5v-1M17 21.5v-1M13.5 17h-1M21.5 17h-1M14.52 14.52l-.7-.7M19.48 19.48l-.7-.7M14.52 19.48l-.7.7M19.48 14.52l-.7-.7" />
+                </svg>
+              </span>
+              <h3>Precision Engineering</h3>
+              <p>Built with advanced technology and exacting standards for superior performance.</p>
+            </article>
+            <article class="why-card">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 11 2 2 4-4" />
+                </svg>
+              </span>
+              <h3>Reliable Performance</h3>
+              <p>Engineered for continuous operation with maximum safety and durability.</p>
+            </article>
+            <article class="why-card">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 20H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h1a2 2 0 0 0 2-2 2 2 0 0 0-2-2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v1a2 2 0 0 0 2 2 2 2 0 0 0 2-2V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1a2 2 0 0 0-2 2 2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2 2 2 0 0 0-2 2v1a2 2 0 0 1-2 2z" />
+                </svg>
+              </span>
+              <h3>Custom Solutions</h3>
+              <p>Tailored systems designed to meet your exact operational needs.</p>
+            </article>
+            <article class="why-card">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3.5z" />
+                </svg>
+              </span>
+              <h3>Specialized Gas Handling</h3>
+              <p>Safe, efficient, and precise handling of a wide range of industrial gases.</p>
+            </article>
+            <article class="why-card">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+                  <path d="M12 17a5 5 0 0 1-4-3" />
+                  <path d="m12 17 4-6" />
+                  <circle cx="12" cy="17" r="1.5" />
+                </svg>
+              </span>
+              <h3>Testing & Calibration Support</h3>
+              <p>Comprehensive testing and calibration for unmatched accuracy and compliance.</p>
+            </article>
           </div>
         </div>
       </div>

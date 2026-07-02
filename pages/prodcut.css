@@ -4546,6 +4546,57 @@
   letter-spacing: 0;
 }
 
+/* Match section heading style with "Our Product Categories" */
+.product-page-shell .section-heading h2,
+.certificate-page .cert-standard-intro h2,
+.certificate-page .cert-section-heading h2,
+.about-page .about-story-content h2,
+.about-page .about-proof-heading h2,
+.about-page .director-section-heading h2,
+.about-page .about-nabl-title,
+.client-page .clients-subheading,
+.client-page .client-group-title,
+.contact-page .contact-title,
+.contact-page .form-title,
+.contact-page .presence-title {
+  color: #07364d;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.08;
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.product-page-shell .section-heading h2 strong,
+.certificate-page .cert-section-heading h2 strong,
+.certificate-page .cert-info-cta h2 span,
+.about-page .director-section-heading h2 span,
+.client-page .clients-subheading span,
+.contact-page .contact-title span,
+.contact-page .form-title span,
+.contact-page .presence-title span {
+  color: #ff6a21;
+}
+
+.about-page .about-proof-section .about-proof-heading h2 {
+  color: #ffffff;
+}
+
+.about-page .about-proof-section .about-proof-heading h2 {
+  color: #ffffff;
+}
+
+.about-page .about-proof-heading,
+.about-page .director-section-heading,
+.product-page-shell .section-heading,
+.certificate-page .cert-section-heading {
+  margin-bottom: 44px;
+}
+
+.about-page .about-proof-heading h2 {
+  color: #ffffff;
+}
+
 /* About page */
 .about-page {
   background: #f6f9fc;
@@ -7423,4 +7474,36 @@
   .about-nabl-images {
     height: 240px;
   }
+}
+
+/* Final heading consistency: same scale as "Our Product Categories" */
+.product-page-shell .section-heading h2,
+.certificate-page .cert-standard-intro h2,
+.certificate-page .cert-section-heading h2,
+.about-page .about-story-content h2,
+.about-page .about-proof-heading h2,
+.about-page .director-section-heading h2,
+.about-page .about-nabl-title,
+.client-page .clients-subheading,
+.client-page .client-group-title,
+.contact-page .contact-title,
+.contact-page .form-title,
+.contact-page .presence-title {
+  color: #07364d;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.08;
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.product-page-shell .section-heading h2 strong,
+.certificate-page .cert-section-heading h2 strong,
+.certificate-page .cert-info-cta h2 span,
+.about-page .director-section-heading h2 span,
+.client-page .clients-subheading span,
+.contact-page .contact-title span,
+.contact-page .form-title span,
+.contact-page .presence-title span {
+  color: #ff6a21;
 }

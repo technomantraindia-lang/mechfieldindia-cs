@@ -221,7 +221,7 @@ function CertificatePage() {
           <div className="container">
             <div className="cert-section-heading">
               <span>Our Achievements</span>
-              <h2>Recognized. Certified. Trusted.</h2>
+              <h2>Recognized. <strong>Certified.</strong> Trusted.</h2>
             </div>
 
             <div className="cert-card-grid">

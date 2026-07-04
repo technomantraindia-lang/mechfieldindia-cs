@@ -1386,13 +1386,13 @@ svg {
 .industry-card {
   position: relative;
   counter-increment: industry-card;
-  background: rgba(0, 78, 115, 0.12); /* Default thin border color */
+  background: linear-gradient(135deg, var(--navy) 0%, var(--orange) 100%);
   clip-path: polygon(36px 0%, 100% 0%, 100% calc(100% - 36px), calc(100% - 36px) 100%, 0% 100%, 0% 36px);
   padding: 1.5px; /* Acts as the border width */
   filter: drop-shadow(0 12px 30px rgba(0, 78, 115, 0.07));
   transform: perspective(1000px) rotateY(0deg) translateY(0deg);
   transform-style: preserve-3d;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.3s ease, filter 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.3s ease, filter 0.3s ease, clip-path 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   isolation: isolate;
   height: 100%;
   min-height: 205px;
@@ -1402,6 +1402,8 @@ svg {
   transform: perspective(1000px) rotateY(7deg) translateY(-8px);
   background: linear-gradient(135deg, var(--navy) 0%, var(--orange) 100%);
   filter: drop-shadow(-8px 20px 42px rgba(0, 78, 115, 0.16));
+  /* Morph slanted corners to top-right/bottom-left on hover */
+  clip-path: polygon(0% 0%, calc(100% - 36px) 0%, 100% 36px, 100% 100%, 36px 100%, 0% calc(100% - 36px));
 }
 
 .industry-card-inner {
@@ -1418,11 +1420,13 @@ svg {
   overflow: hidden;
   transform-style: preserve-3d;
   perspective: 1000px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, clip-path 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .industry-card:hover .industry-card-inner {
   background: linear-gradient(135deg, #ffffff 0%, rgba(240, 245, 249, 0.65) 100%);
+  /* Morph inner card slanted corners to top-right/bottom-left in sync */
+  clip-path: polygon(0% 0%, calc(100% - 35px) 0%, 100% 35px, 100% 100%, 35px 100%, 0% calc(100% - 35px));
 }
 
 /* Custom Decorative Sci-Fi Elements */
@@ -1435,6 +1439,11 @@ svg {
   background: #002b49;
   z-index: 5;
   border-radius: 0 0 2px 2px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.industry-card:hover .tech-tab {
+  transform: translateX(-32px); /* shift tab left to avoid the new right-corner cut */
 }
 
 .tech-dots {
@@ -1444,6 +1453,11 @@ svg {
   z-index: 3;
   opacity: 0.75;
   pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.industry-card:hover .tech-dots {
+  opacity: 0.2; /* fade dots slightly to clear the new bottom-left cut */
 }
 
 .tech-bottom-line {
@@ -1462,6 +1476,11 @@ svg {
   right: 0;
   z-index: 3;
   pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.industry-card:hover .tech-corner-lines {
+  opacity: 0; /* fade out because bottom-right corner is no longer cut */
 }
 
 /* Large Background Number */
@@ -1591,10 +1610,14 @@ svg {
   line-height: 1.65;
 }
 
+.products .container {
+  width: min(1340px, calc(100% - 48px));
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 .products-actions {
@@ -1655,7 +1678,7 @@ svg {
 
 .product-img-wrap {
   display: block;
-  height: 198px;
+  height: 215px;
   padding: 0;
   border-radius: 0;
   background:
@@ -1683,7 +1706,7 @@ svg {
 }
 
 .product-body {
-  padding: 18px 18px 20px;
+  padding: 20px 18px 20px;
 }
 
 .product-info {
@@ -1691,9 +1714,9 @@ svg {
 }
 
 .product-info h3 {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   color: var(--navy);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   line-height: 1.4;
   transition: color 0.2s;
@@ -1706,8 +1729,8 @@ svg {
 .product-info p {
   margin: 0;
   color: var(--muted);
-  font-size: 10.5px;
-  line-height: 1.5;
+  font-size: 11.5px;
+  line-height: 1.55;
   font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 2;

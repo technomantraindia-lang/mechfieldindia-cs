@@ -177,11 +177,27 @@ function App() {
       });
     }
 
+    // ── Exclusive FAQ Accordion Toggle ──
+    const handleFAQClick = (event) => {
+      const summary = event.target.closest(".faq-item summary");
+      if (!summary) return;
+      
+      const currentItem = summary.parentElement; // details
+      
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        if (item !== currentItem && item.hasAttribute("open")) {
+          item.removeAttribute("open");
+        }
+      });
+    };
+    document.addEventListener("click", handleFAQClick);
+
     return () => {
       documentClickCleanup?.();
       dropdownCleanups.forEach((cleanup) => cleanup());
       testimonialCleanups.forEach((cleanup) => cleanup());
       clearInterval(slideTimer);
+      document.removeEventListener("click", handleFAQClick);
     };
   }, [isAboutPage, isProductPage, isCertificatePage, isClientPage, isContactPage]);
 

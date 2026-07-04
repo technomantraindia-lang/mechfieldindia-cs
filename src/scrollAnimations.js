@@ -134,5 +134,68 @@ export function initScrollAnimations() {
 
   elements.forEach((element) => observer.observe(element));
 
-  return () => observer.disconnect();
+  // Initialize Counter animations
+  animateCounters();
+
+  return () => {
+    observer.disconnect();
+  };
+}
+
+function animateCounters() {
+  const counterElements = document.querySelectorAll(".about-stats strong, .about-year-pill strong, .testimonial-trust-item strong");
+  if (!counterElements.length) return;
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const targetStr = el.dataset.target || "";
+      const suffix = el.dataset.suffix || "";
+      const targetVal = parseInt(targetStr, 10);
+      
+      if (isNaN(targetVal)) return;
+      
+      let startVal = 0;
+      const duration = 1600; // 1.6 seconds smooth animation
+      const startTime = performance.now();
+      
+      function updateNumber(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing out cubic (starts fast, slows down at the end)
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentVal = Math.floor(easeProgress * targetVal);
+        
+        el.innerText = currentVal + suffix;
+        
+        if (progress < 1) {
+          requestAnimationFrame(updateNumber);
+        } else {
+          el.innerText = targetVal + suffix;
+        }
+      }
+      
+      requestAnimationFrame(updateNumber);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.08 });
+
+  counterElements.forEach((el) => {
+    // If not already prepared with data attributes, parse the inner text
+    if (!el.dataset.target) {
+      const text = el.innerText.trim();
+      const numMatch = text.match(/^([0-9]+)(.*)$/);
+      if (numMatch) {
+        el.dataset.target = numMatch[1];
+        el.dataset.suffix = numMatch[2];
+      } else {
+        el.dataset.target = text;
+        el.dataset.suffix = "";
+      }
+      el.innerText = "0" + el.dataset.suffix;
+    }
+    counterObserver.observe(el);
+  });
 }

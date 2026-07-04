@@ -4,6 +4,15 @@
  * Edit section-by-section using the HTML comments below.
  */
 const pageMarkup = `
+  <!-- SVG Clip Paths for Industry Cards -->
+  <svg width="0" height="0" style="position: absolute; pointer-events: none;">
+    <defs>
+      <clipPath id="card-clip" clipPathUnits="objectBoundingBox">
+        <path d="M 0.095 0 L 0.95 0 Q 1 0 1 0.085 L 1 0.83 L 0.905 1 L 0.05 1 Q 0 1 0 0.915 L 0 0.17 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
   <!-- ========== Top Bar: phone, email, location, social ========== -->
   <div class="top-bar">
     <div class="top-bar-inner">
@@ -385,7 +394,8 @@ const pageMarkup = `
           <h2 id="industries-heading">Industries We <strong>Serve</strong></h2>
           <p class="section-desc">Delivering reliable SF6 gas handling and speciality gas equipment to critical sectors across power, infrastructure and industrial operations.</p>
         </div>
-        <div class="industries-grid">
+        <div class="industries-wrapper">
+          <div class="industries-grid">
           <article class="industry-card" data-reveal="left">
             <div class="industry-card-inner">
               <div class="tech-tab"></div>
@@ -401,14 +411,13 @@ const pageMarkup = `
                 <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
               </svg>
               <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
-                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
-                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
-                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
-                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+                <line x1="5" y1="5" x2="155" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="155" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2.5" fill="var(--orange)" />
               </svg>
-              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
-                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              <svg class="tech-corner-lines" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M 57 15 L 57 27 L 27 57 L 15 57" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.2" fill="none" />
+                <path d="M 60 12 L 60 25 L 25 60 L 12 60" stroke="rgba(0, 78, 115, 0.15)" stroke-width="1.2" fill="none" />
               </svg>
               <div class="industry-icon-container">
                 <div class="industry-icon-orange-accent"></div>
@@ -439,14 +448,13 @@ const pageMarkup = `
                 <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
               </svg>
               <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
-                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
-                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
-                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
-                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+                <line x1="5" y1="5" x2="155" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="155" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2.5" fill="var(--orange)" />
               </svg>
-              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
-                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              <svg class="tech-corner-lines" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M 57 15 L 57 27 L 27 57 L 15 57" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.2" fill="none" />
+                <path d="M 60 12 L 60 25 L 25 60 L 12 60" stroke="rgba(0, 78, 115, 0.15)" stroke-width="1.2" fill="none" />
               </svg>
               <div class="industry-icon-container">
                 <div class="industry-icon-orange-accent"></div>
@@ -479,14 +487,13 @@ const pageMarkup = `
                 <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
               </svg>
               <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
-                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
-                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
-                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
-                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+                <line x1="5" y1="5" x2="155" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="155" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2.5" fill="var(--orange)" />
               </svg>
-              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
-                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              <svg class="tech-corner-lines" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M 57 15 L 57 27 L 27 57 L 15 57" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.2" fill="none" />
+                <path d="M 60 12 L 60 25 L 25 60 L 12 60" stroke="rgba(0, 78, 115, 0.15)" stroke-width="1.2" fill="none" />
               </svg>
               <div class="industry-icon-container">
                 <div class="industry-icon-orange-accent"></div>
@@ -520,14 +527,13 @@ const pageMarkup = `
                 <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
               </svg>
               <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
-                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
-                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
-                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
-                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+                <line x1="5" y1="5" x2="155" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="155" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2.5" fill="var(--orange)" />
               </svg>
-              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
-                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              <svg class="tech-corner-lines" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M 57 15 L 57 27 L 27 57 L 15 57" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.2" fill="none" />
+                <path d="M 60 12 L 60 25 L 25 60 L 12 60" stroke="rgba(0, 78, 115, 0.15)" stroke-width="1.2" fill="none" />
               </svg>
               <div class="industry-icon-container">
                 <div class="industry-icon-orange-accent"></div>
@@ -562,14 +568,13 @@ const pageMarkup = `
                 <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
               </svg>
               <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
-                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
-                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
-                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
-                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+                <line x1="5" y1="5" x2="155" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="155" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2.5" fill="var(--orange)" />
               </svg>
-              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
-                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              <svg class="tech-corner-lines" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M 57 15 L 57 27 L 27 57 L 15 57" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.2" fill="none" />
+                <path d="M 60 12 L 60 25 L 25 60 L 12 60" stroke="rgba(0, 78, 115, 0.15)" stroke-width="1.2" fill="none" />
               </svg>
               <div class="industry-icon-container">
                 <div class="industry-icon-orange-accent"></div>
@@ -606,14 +611,13 @@ const pageMarkup = `
                 <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
               </svg>
               <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
-                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
-                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
-                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
-                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+                <line x1="5" y1="5" x2="155" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="155" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2.5" fill="var(--orange)" />
               </svg>
-              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
-                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              <svg class="tech-corner-lines" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M 57 15 L 57 27 L 27 57 L 15 57" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.2" fill="none" />
+                <path d="M 60 12 L 60 25 L 25 60 L 12 60" stroke="rgba(0, 78, 115, 0.15)" stroke-width="1.2" fill="none" />
               </svg>
               <div class="industry-icon-container">
                 <div class="industry-icon-orange-accent"></div>
@@ -633,7 +637,8 @@ const pageMarkup = `
           </article>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- ========== Client Testimonials Carousel ========== -->
     <section class="testimonials" aria-labelledby="testimonials-heading">
@@ -722,57 +727,78 @@ const pageMarkup = `
     </section>
 
     <!-- ========== FAQ + Contact CTA Card ========== -->
-    <!-- ========== FAQ + Contact CTA Card ========== -->
     <section class="faq-section" aria-labelledby="faq-heading">
       <div class="container faq-layout">
         <div class="faq-main">
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-header">
+            <div class="faq-eyebrow">
+              <span class="faq-eyebrow-text">FAQ</span>
+              <span class="faq-eyebrow-line"></span>
+            </div>
+            <h2 id="faq-heading">Frequently Asked <br><span class="accent-orange">Questions</span></h2>
+            <p class="faq-lead">Everything you need to know about our SF6 gas handling solutions, support, and calibration services.</p>
+          </div>
+
           <div class="faq-list">
-            <details class="faq-item">
+            <details class="faq-item" name="faq" open>
               <summary>
-                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20" /><path d="M5 17V8.5L9 5v12" /><path d="M9 17V8.5L13 5v12" /><path d="M13 17V8.5L17 5v12" /><path d="M17 17V10l4-2.5V17" /></svg>
+                </span>
                 <span class="faq-q">What types of SF6 gas handling equipment do you manufacture?</span>
-                <span class="faq-toggle" aria-hidden="true">+</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
               </summary>
               <div class="faq-answer">
-                <p>We manufacture SF6 gas recovery and transfer units, filling devices, storage tanks, leak detectors, filters, vacuum units, connectors, manifolds and related accessories for power and electrical infrastructure.</p>
+                <p>We manufacture a comprehensive range of SF6 gas handling equipment, including gas reclaimers, vacuum pumps, gas filling systems, leak detectors, cylinders and accessories—engineered for safety, precision, and long-term reliability.</p>
               </div>
             </details>
-            <details class="faq-item">
+
+            <details class="faq-item" name="faq">
               <summary>
-                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+                </span>
                 <span class="faq-q">Do you provide installation and after-sales support?</span>
-                <span class="faq-toggle" aria-hidden="true">+</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
               </summary>
               <div class="faq-answer">
                 <p>Yes. We offer installation guidance, operator training, preventive maintenance support and spare parts assistance across India through our technical team.</p>
               </div>
             </details>
-            <details class="faq-item">
+
+            <details class="faq-item" name="faq">
               <summary>
-                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 11 2 2 4-4" /></svg>
+                </span>
                 <span class="faq-q">Are your products ISO certified?</span>
-                <span class="faq-toggle" aria-hidden="true">+</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
               </summary>
               <div class="faq-answer">
                 <p>Our manufacturing processes follow international quality standards. We maintain ISO certification and supply equipment trusted by utilities and industrial clients nationwide.</p>
               </div>
             </details>
-            <details class="faq-item">
+
+            <details class="faq-item" name="faq">
               <summary>
-                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 9h6v6H9z" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" /></svg>
+                </span>
                 <span class="faq-q">Can I request a customized solution for my project?</span>
-                <span class="faq-toggle" aria-hidden="true">+</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
               </summary>
               <div class="faq-answer">
                 <p>Absolutely. Share your capacity, pressure rating and application details and our engineers will recommend or customize the right SF6 handling solution for your site.</p>
               </div>
             </details>
-            <details class="faq-item">
+
+            <details class="faq-item" name="faq">
               <summary>
-                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 7.54 16.59" /><path d="M19.53 14A10 10 0 1 1 12 2" /><circle cx="12" cy="12" r="2" /><path d="M12 12l4-4" /></svg>
+                </span>
                 <span class="faq-q">Do you offer calibration services?</span>
-                <span class="faq-toggle" aria-hidden="true">+</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
               </summary>
               <div class="faq-answer">
                 <p>Yes. We provide certified calibration and testing services for gas handling instruments and related equipment through our calibration laboratory.</p>
@@ -780,16 +806,74 @@ const pageMarkup = `
             </details>
           </div>
         </div>
-        <aside class="faq-cta" aria-label="Contact our experts">
-          <div class="faq-cta-visual">
-            <img src="assets/sf6-equipment.png" alt="SF6 gas handling equipment">
+
+        <div class="faq-right-column">
+          <aside class="faq-cta-card" aria-label="Contact our experts">
+            <div class="faq-cta-bg" style="background-image: url('assets/faq.png');"></div>
+            <div class="faq-cta-overlay"></div>
+            <div class="faq-cta-content">
+              <div class="faq-cta-icon-wrapper">
+                <div class="faq-cta-icon-hexagon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6" /><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" /></svg>
+                </div>
+              </div>
+              <h3>Need Expert Help?</h3>
+              <p>Talk to our team for product guidance, quotations, and technical support.</p>
+              <a href="#contact" class="btn btn-orange-fill btn-contact">Contact Us <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              
+              <div class="faq-cta-footer">
+                <div class="faq-cta-footer-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                  <span>Trusted Quality</span>
+                </div>
+                <div class="faq-cta-footer-divider"></div>
+                <div class="faq-cta-footer-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
+                  <span>Expert Support</span>
+                </div>
+                <div class="faq-cta-footer-divider"></div>
+                <div class="faq-cta-footer-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
+                  <span>Precision Performance</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="faq-partners-wrapper">
+            <div class="faq-partners-title">
+              <span class="faq-partners-line"></span>
+              <h4>Trusted by Industry Leaders</h4>
+              <span class="faq-partners-line"></span>
+            </div>
+            <div class="faq-partners-marquee">
+              <div class="faq-partners-track">
+                <div class="faq-partner-img-card"><img src="assets/client/center power reserach .png" alt="CPRI" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/barc.png" alt="BARC" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/nalco.png" alt="NALCO" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/bhel.png" alt="BHEL" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/ongc.png" alt="ONGC" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/getco.png" alt="GETCO" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/toshiba.png" alt="Toshiba" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/schneider.png" alt="Schneider" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/abb.png" alt="ABB" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/siemes.png" alt="Siemens" /></div>
+                
+                <!-- Duplicate group for infinite looping -->
+                <div class="faq-partner-img-card"><img src="assets/client/center power reserach .png" alt="CPRI" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/barc.png" alt="BARC" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/nalco.png" alt="NALCO" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/bhel.png" alt="BHEL" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/ongc.png" alt="ONGC" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/getco.png" alt="GETCO" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/toshiba.png" alt="Toshiba" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/schneider.png" alt="Schneider" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/abb.png" alt="ABB" /></div>
+                <div class="faq-partner-img-card"><img src="assets/client/siemes.png" alt="Siemens" /></div>
+              </div>
+            </div>
           </div>
-          <div class="faq-cta-body">
-            <h3>Have more questions?</h3>
-            <p>Our experts are here to help you.</p>
-            <a class="faq-cta-btn" href="#contact">Contact Us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
-          </div>
-        </aside>
+        </div>
       </div>
     </section>
 

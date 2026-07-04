@@ -165,7 +165,7 @@ function ClientPage() {
               <span className="clients-line"></span>
             </div>
 
-            <div className="client-group-wrapper">
+             <div className="client-group-wrapper">
               <p className="client-group-subtitle">All India Presence</p>
               <h3 className="client-group-title">Utility</h3>
               <div className="client-logo-grid">

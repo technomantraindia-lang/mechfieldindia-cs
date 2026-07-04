@@ -3243,9 +3243,9 @@ body:has(.product-page-shell) {
 
 .client-logo-card:hover {
   border-radius: 4px 24px; /* Morph corners on hover! */
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: #ff6a1a;
-  box-shadow: 0 16px 36px rgba(255, 106, 26, 0.12);
+  box-shadow: 0 16px 36px rgba(255, 106, 26, 0.16);
 }
 
 .client-logo-img {

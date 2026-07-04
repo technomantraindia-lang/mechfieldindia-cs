@@ -131,22 +131,78 @@ function App() {
 
     // ── Testimonials carousel (auto-slide every 5s) ──
     const testimonialTrack = document.querySelector(".testimonial-track");
-    const testimonialDots = document.querySelectorAll(".testimonial-dot");
+    const testimonialDotContainer = document.querySelector(".testimonial-dots");
     const testimonialCleanups = [];
     let slideTimer;
     let activeIndex = 0;
+    let clonedMobileCard = null;
+    const mobileTestimonialsQuery = window.matchMedia("(max-width: 640px)");
 
-    if (testimonialTrack && testimonialDots.length) {
-      const goToSlide = (index) => {
-        const total = testimonialDots.length;
-        activeIndex = (index + total) % total;
-        testimonialTrack.style.transform = `translateX(-${activeIndex * 100}%)`;
+    if (testimonialTrack && testimonialDotContainer) {
+      const originalSlides = Array.from(testimonialTrack.querySelectorAll(".testimonial-slide"));
+      const originalCards = Array.from(testimonialTrack.querySelectorAll(".testimonial-card"));
 
-        testimonialDots.forEach((dot, i) => {
-          const isActive = i === activeIndex;
+      const getDots = () => Array.from(testimonialDotContainer.querySelectorAll(".testimonial-dot"));
+
+      const renderDots = (count) => {
+        testimonialDotContainer.textContent = "";
+
+        for (let index = 0; index < count; index += 1) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "testimonial-dot";
+          dot.setAttribute("aria-label", `Testimonial ${index + 1}`);
+          dot.setAttribute("aria-selected", "false");
+
+          const handleDotClick = () => {
+            goToSlide(index);
+            startAutoSlide();
+          };
+
+          dot.addEventListener("click", handleDotClick);
+          testimonialCleanups.push(() => dot.removeEventListener("click", handleDotClick));
+          testimonialDotContainer.appendChild(dot);
+        }
+      };
+
+      const getMobileStep = () => {
+        const firstCard = originalCards[0];
+        if (!firstCard) return 0;
+        const trackStyle = window.getComputedStyle(testimonialTrack);
+        const gap = Number.parseFloat(trackStyle.columnGap || trackStyle.gap || "0") || 0;
+        return firstCard.getBoundingClientRect().width + gap;
+      };
+
+      const updateDots = (index, total) => {
+        getDots().forEach((dot, i) => {
+          const isActive = i === index % total;
           dot.classList.toggle("is-active", isActive);
           dot.setAttribute("aria-selected", String(isActive));
         });
+      };
+
+      const setTrackTransition = (enabled) => {
+        testimonialTrack.style.transition = enabled
+          ? ""
+          : "none";
+      };
+
+      const goToSlide = (index, { instant = false } = {}) => {
+        const isMobile = mobileTestimonialsQuery.matches;
+        const total = isMobile ? originalCards.length : originalSlides.length;
+        if (!total) return;
+
+        activeIndex = isMobile ? index : (index + total) % total;
+        setTrackTransition(!instant);
+
+        if (isMobile) {
+          testimonialTrack.style.transform = `translateX(-${activeIndex * getMobileStep()}px)`;
+          updateDots(activeIndex, total);
+          return;
+        }
+
+        testimonialTrack.style.transform = `translateX(-${activeIndex * 100}%)`;
+        updateDots(activeIndex, total);
       };
 
       const startAutoSlide = () => {
@@ -156,18 +212,50 @@ function App() {
         }, 5000);
       };
 
-      testimonialDots.forEach((dot, index) => {
-        const handleDotClick = () => {
-          goToSlide(index);
-          startAutoSlide();
-        };
+      const setupTestimonials = () => {
+        clearInterval(slideTimer);
+        const isMobile = mobileTestimonialsQuery.matches;
 
-        dot.addEventListener("click", handleDotClick);
-        testimonialCleanups.push(() => dot.removeEventListener("click", handleDotClick));
-      });
+        if (isMobile && !clonedMobileCard && originalCards[0]) {
+          clonedMobileCard = originalCards[0].cloneNode(true);
+          clonedMobileCard.setAttribute("aria-hidden", "true");
+          clonedMobileCard.classList.add("testimonial-card-clone");
+          testimonialTrack.appendChild(clonedMobileCard);
+        }
 
-      goToSlide(0);
-      startAutoSlide();
+        if (!isMobile && clonedMobileCard) {
+          clonedMobileCard.remove();
+          clonedMobileCard = null;
+        }
+
+        renderDots(isMobile ? originalCards.length : originalSlides.length);
+        activeIndex = 0;
+        goToSlide(0, { instant: true });
+        requestAnimationFrame(() => setTrackTransition(true));
+        startAutoSlide();
+      };
+
+      const handleTransitionEnd = () => {
+        if (!mobileTestimonialsQuery.matches) return;
+        if (activeIndex !== originalCards.length) return;
+
+        activeIndex = 0;
+        goToSlide(0, { instant: true });
+        requestAnimationFrame(() => setTrackTransition(true));
+      };
+
+      const handleTestimonialsResize = () => {
+        setupTestimonials();
+      };
+
+      testimonialTrack.addEventListener("transitionend", handleTransitionEnd);
+      mobileTestimonialsQuery.addEventListener("change", handleTestimonialsResize);
+      window.addEventListener("resize", handleTestimonialsResize);
+      testimonialCleanups.push(() => testimonialTrack.removeEventListener("transitionend", handleTransitionEnd));
+      testimonialCleanups.push(() => mobileTestimonialsQuery.removeEventListener("change", handleTestimonialsResize));
+      testimonialCleanups.push(() => window.removeEventListener("resize", handleTestimonialsResize));
+
+      setupTestimonials();
     }
 
     // ── 3D SF6 equipment model (homepage only) ──

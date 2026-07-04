@@ -386,35 +386,250 @@ const pageMarkup = `
           <p class="section-desc">Delivering reliable SF6 gas handling and speciality gas equipment to critical sectors across power, infrastructure and industrial operations.</p>
         </div>
         <div class="industries-grid">
-          <article class="industry-card">
-            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
-            <h3>Power &amp; Utilities</h3>
-            <p>SF6 equipment for substations, switchgear maintenance and transmission networks.</p>
+          <article class="industry-card" data-reveal="left">
+            <div class="industry-card-inner">
+              <div class="tech-tab"></div>
+              <svg class="tech-dots" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                <circle cx="3" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+              </svg>
+              <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
+                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+              </svg>
+              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              </svg>
+              <div class="industry-icon-container">
+                <div class="industry-icon-orange-accent"></div>
+                <span class="industry-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                </span>
+              </div>
+              <div class="industry-card-content">
+                <h3>Power &amp; Utilities</h3>
+                <p>SF6 equipment for substations, switchgear maintenance and transmission networks.</p>
+              </div>
+            </div>
           </article>
-          <article class="industry-card">
-            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V10l7-6 7 6v10"/><path d="M9 20v-6h6v6"/></svg></span>
-            <h3>Electrical Infrastructure</h3>
-            <p>Gas handling systems for electrical contractors and EPC project teams.</p>
+          <article class="industry-card" data-reveal="down">
+            <div class="industry-card-inner">
+              <div class="tech-tab"></div>
+              <svg class="tech-dots" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                <circle cx="3" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+              </svg>
+              <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
+                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+              </svg>
+              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              </svg>
+              <div class="industry-icon-container">
+                <div class="industry-icon-orange-accent"></div>
+                <span class="industry-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 10.182V20a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V10.182a1 1 0 0 0-.447-.832l-8-5.333a1 1 0 0 0-1.106 0l-8 5.333A1 1 0 0 0 3 10.182Z" />
+                    <path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6" />
+                    <path d="M12 2v2M12 7V6" />
+                  </svg>
+                </span>
+              </div>
+              <div class="industry-card-content">
+                <h3>Electrical Infrastructure</h3>
+                <p>Gas handling systems for electrical contractors and EPC project teams.</p>
+              </div>
+            </div>
           </article>
-          <article class="industry-card">
-            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
-            <h3>Manufacturing Plants</h3>
-            <p>Industrial gas regulators, valves and handling units for production facilities.</p>
+          <article class="industry-card" data-reveal="right">
+            <div class="industry-card-inner">
+              <div class="tech-tab"></div>
+              <svg class="tech-dots" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                <circle cx="3" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+              </svg>
+              <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
+                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+              </svg>
+              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              </svg>
+              <div class="industry-icon-container">
+                <div class="industry-icon-orange-accent"></div>
+                <span class="industry-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 20h20" />
+                    <path d="M20 20V8l-6 5V8l-6 5V8L2 13v7" />
+                    <path d="M17 5v3" />
+                    <path d="M14 4v4" />
+                  </svg>
+                </span>
+              </div>
+              <div class="industry-card-content">
+                <h3>Manufacturing Plants</h3>
+                <p>Industrial gas regulators, valves and handling units for production facilities.</p>
+              </div>
+            </div>
           </article>
-          <article class="industry-card">
-            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M9 21V11M15 21V11"/></svg></span>
-            <h3>Oil &amp; Gas Sector</h3>
-            <p>High-pressure connectors, manifolds and safety equipment for demanding environments.</p>
+          <article class="industry-card" data-reveal="left">
+            <div class="industry-card-inner">
+              <div class="tech-tab"></div>
+              <svg class="tech-dots" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                <circle cx="3" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+              </svg>
+              <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
+                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+              </svg>
+              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              </svg>
+              <div class="industry-icon-container">
+                <div class="industry-icon-orange-accent"></div>
+                <span class="industry-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12h18" stroke-width="2.5" />
+                    <path d="M12 12V6" stroke-width="2" />
+                    <circle cx="12" cy="5" r="2.5" fill="none" stroke-width="2" />
+                    <path d="M9 5h6" stroke-width="2" />
+                    <path d="M5 9v6M19 9v6" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+              <div class="industry-card-content">
+                <h3>Oil &amp; Gas Sector</h3>
+                <p>High-pressure connectors, manifolds and safety equipment for demanding environments.</p>
+              </div>
+            </div>
           </article>
-          <article class="industry-card">
-            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span>
-            <h3>Railways &amp; Metro</h3>
-            <p>Dependable gas handling solutions for rail electrification and metro projects.</p>
+          <article class="industry-card" data-reveal="up">
+            <div class="industry-card-inner">
+              <div class="tech-tab"></div>
+              <svg class="tech-dots" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                <circle cx="3" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+              </svg>
+              <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
+                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+              </svg>
+              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              </svg>
+              <div class="industry-icon-container">
+                <div class="industry-icon-orange-accent"></div>
+                <span class="industry-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="3" width="16" height="16" rx="2" />
+                    <path d="M4 11h16" />
+                    <path d="M12 3v8" />
+                    <path d="m8 19-3 3" />
+                    <path d="m16 19 3 3" />
+                    <circle cx="8" cy="15" r="1.5" fill="currentColor" />
+                    <circle cx="16" cy="15" r="1.5" fill="currentColor" />
+                  </svg>
+                </span>
+              </div>
+              <div class="industry-card-content">
+                <h3>Railways &amp; Metro</h3>
+                <p>Dependable gas handling solutions for rail electrification and metro projects.</p>
+              </div>
+            </div>
           </article>
-          <article class="industry-card">
-            <span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2"/><path d="M8.5 2h7"/></svg></span>
-            <h3>Research &amp; Laboratories</h3>
-            <p>Laboratory furniture, calibration services and precision measuring instruments.</p>
+          <article class="industry-card" data-reveal="right">
+            <div class="industry-card-inner">
+              <div class="tech-tab"></div>
+              <svg class="tech-dots" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                <circle cx="3" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="3" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="10" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="3" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="10" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+                <circle cx="17" cy="17" r="1.5" fill="rgba(0, 78, 115, 0.15)" />
+              </svg>
+              <svg class="tech-bottom-line" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                <line x1="5" y1="5" x2="195" y2="5" stroke="rgba(255, 111, 43, 0.2)" stroke-width="1.5" />
+                <line x1="5" y1="5" x2="135" y2="5" stroke="var(--orange)" stroke-width="1.5" />
+                <circle cx="135" cy="5" r="3.5" stroke="var(--orange)" stroke-width="1.5" fill="#fff" />
+                <circle cx="5" cy="5" r="2" fill="var(--orange)" />
+              </svg>
+              <svg class="tech-corner-lines" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <line x1="12" y1="40" x2="40" y2="12" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+                <line x1="20" y1="40" x2="40" y2="20" stroke="rgba(0, 78, 115, 0.35)" stroke-width="1.5" />
+              </svg>
+              <div class="industry-icon-container">
+                <div class="industry-icon-orange-accent"></div>
+                <span class="industry-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2" />
+                    <path d="M8.5 2h7" />
+                    <path d="M8.5 15h7" />
+                  </svg>
+                </span>
+              </div>
+              <div class="industry-card-content">
+                <h3>Research &amp; Laboratories</h3>
+                <p>Laboratory furniture, calibration services and precision measuring instruments.</p>
+              </div>
+            </div>
           </article>
         </div>
       </div>

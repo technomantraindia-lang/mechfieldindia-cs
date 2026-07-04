@@ -92,13 +92,15 @@ export function initScrollAnimations() {
       if (element.closest(".contact-section")) return;
 
       const revealType =
-        type === "alternate"
-          ? index % 2 === 0
-            ? "left"
-            : "right"
-          : type === "cycle"
-            ? REVEAL_CYCLE[index % REVEAL_CYCLE.length]
-            : type;
+        element.dataset.reveal || (
+          type === "alternate"
+            ? index % 2 === 0
+              ? "left"
+              : "right"
+            : type === "cycle"
+              ? REVEAL_CYCLE[index % REVEAL_CYCLE.length]
+              : type
+        );
       element.dataset.reveal = revealType;
       element.dataset.revealApplied = "true";
 

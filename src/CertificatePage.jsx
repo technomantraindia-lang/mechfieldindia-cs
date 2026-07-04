@@ -151,6 +151,10 @@ function CertificatePage() {
   const [activeCertificate, setActiveCertificate] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (!activeCertificate) return undefined;
 
     const handleKeyDown = (event) => {

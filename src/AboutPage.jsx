@@ -297,7 +297,7 @@ function AboutPage() {
 
         <section className="about-proof-section" aria-label="Company strengths, mission and vision">
           <div className="container">
-            <div className="about-proof-heading animate-slide-bottom">
+            <div className="about-proof-heading animate-slide-top">
               <p className="section-label">WHY CHOOSE US</p>
               <h2>Dependable Engineering, Proven in the Field</h2>
               <span>Built on quality manufacturing, durable materials and responsive client support.</span>
@@ -317,7 +317,7 @@ function AboutPage() {
 
             <div className="about-purpose-grid">
               {purposeCards.map(([icon, title, text], index) => (
-                <article className="about-purpose-card animate-slide-bottom" style={{ animationDelay: `${index * 0.08}s` }} key={title}>
+                <article className={`about-purpose-card ${["animate-slide-left", "animate-slide-bottom", "animate-slide-right"][index % 3]}`} style={{ animationDelay: `${index * 0.08}s` }} key={title}>
                   <span className="about-purpose-icon"><Icon name={icon} /></span>
                   <h2>{title}</h2>
                   <span className="about-purpose-rule" aria-hidden="true"></span>
@@ -331,7 +331,7 @@ function AboutPage() {
         <section className="director-detail-section" aria-labelledby="director-detail-heading">
           <div className="director-bg-linework" aria-hidden="true"></div>
           <div className="container director-detail-inner">
-            <div className="director-section-heading animate-slide-bottom">
+            <div className="director-section-heading animate-slide-top">
               <p><span></span>Director Detail<span></span></p>
               <h2 id="director-detail-heading">Leadership Behind Mech<span>field</span></h2>
               <strong>Experienced leadership driving design, production, quality, and long-term growth.</strong>
@@ -339,7 +339,7 @@ function AboutPage() {
 
             <div className="director-card-grid">
               {directors.map((director, index) => (
-                <article className="director-card animate-slide-bottom" style={{ animationDelay: `${index * 0.08}s` }} key={director.name}>
+                <article className={`director-card ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`} style={{ animationDelay: `${index * 0.08}s` }} key={director.name}>
                   <div className="director-portrait">
                     <img src={director.image} alt={director.name} />
                   </div>
@@ -365,8 +365,8 @@ function AboutPage() {
                 <span></span>
               </div>
               <div className="togetherness-track">
-                {togethernessItems.map(([icon, text]) => (
-                  <article className="togetherness-item" key={text}>
+                {togethernessItems.map(([icon, text], index) => (
+                  <article className={`togetherness-item ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`} style={{ animationDelay: `${index * 0.06}s` }} key={text}>
                     <span className="togetherness-icon"><Icon name={icon} /></span>
                     <p>{text}</p>
                   </article>
@@ -375,17 +375,17 @@ function AboutPage() {
               <div className="responsibility-row">
                 <h4>Responsibilities under :</h4>
                 <div className="responsibility-grid">
-                  <div className="responsibility-item">
+                  <div className="responsibility-item animate-slide-left">
                     <span><Icon name="drafting" /></span>
                     <p><strong>Mr. Hiren Patel -</strong> Design, Development, Costing and after sales/ service activities.</p>
                   </div>
-                  <div className="responsibility-item">
+                  <div className="responsibility-item animate-slide-right">
                     <span><Icon name="clipboard" /></span>
                     <p><strong>Mr. Ramnik Patel -</strong> Legal liabilities, Administrative policies, production, Quality matter and Logistics.</p>
                   </div>
                 </div>
               </div>
-              <div className="director-authority-note">
+              <div className="director-authority-note animate-slide-bottom">
                 <span><Icon name="shield" /></span>
                 <strong>Both the directors are authorized to take all decisions for organization.</strong>
               </div>
@@ -395,7 +395,7 @@ function AboutPage() {
 
         <section className="about-nabl-section">
           <div className="container">
-            <div className="about-nabl-card animate-slide-bottom">
+            <div className="about-nabl-card animate-slide-left">
               <div className="about-nabl-content">
                 <p className="about-nabl-label">CALIBRATION LABORATORY / CERTIFICATIONS</p>
                 <h2 className="about-nabl-title">NABL ACCREDITED CALIBRATION LABORATORY</h2>
@@ -448,7 +448,7 @@ function AboutPage() {
         </section>
 
         <section className="about-cta-section">
-          <div className="container about-cta-inner">
+          <div className="container about-cta-inner animate-slide-bottom">
             <div>
               <h2>Need a dependable SF6 handling partner?</h2>
               <p>Connect with our team for product selection, customization and service support.</p>

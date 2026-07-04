@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { initScrollAnimations } from "./scrollAnimations.js";
 
 /**
  * Products page — built with React components.
@@ -352,33 +353,88 @@ function Header() {
   );
 }
 
+/** Split category title into white + orange segments for hero heading */
+function splitCategoryTitle(title) {
+  for (const separator of [" & ", " / "]) {
+    const index = title.indexOf(separator);
+    if (index === -1) continue;
+
+    return [
+      { text: title.slice(0, index).trim(), tone: "navy" },
+      { text: title.slice(index).trim(), tone: "orange" }
+    ];
+  }
+
+  const words = title.split(/\s+/);
+  if (words.length <= 2) {
+    return [
+      { text: words.length > 1 ? words.slice(0, -1).join(" ") : words[0], tone: "navy" },
+      ...(words.length > 1 ? [{ text: words[words.length - 1], tone: "orange" }] : [])
+    ];
+  }
+
+  const mid = Math.ceil(words.length / 2);
+  return [
+    { text: words.slice(0, mid).join(" "), tone: "navy" },
+    { text: words.slice(mid).join(" "), tone: "orange" }
+  ];
+}
+
+function CategoryHeroTitle({ title }) {
+  const segments = splitCategoryTitle(title);
+
+  return (
+    <h1>
+      <span className="h1-line">
+        {segments.map((segment, index) => (
+          <span key={segment.text}>
+            {index > 0 ? " " : ""}
+            <span className={segment.tone === "orange" ? "h1-orange" : "h1-navy"}>{segment.text}</span>
+          </span>
+        ))}
+      </span>
+    </h1>
+  );
+}
+
 /** Products page banner with breadcrumb */
 function ProductHero({ selectedCategory }) {
   return (
-    <section className="page-hero" aria-label={selectedCategory?.title || "Products"}>
+    <section className={`page-hero${selectedCategory ? " page-hero--category" : ""}`} aria-label={selectedCategory?.title || "Products"}>
       <div className="page-hero-bg" aria-hidden="true">
         <img src="/assets/banera/product.png" alt="" />
       </div>
       <div className="page-hero-inner">
-        <nav className="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span aria-hidden="true">/</span>
-          <a href={productPageBase}>Products</a>
-          {selectedCategory && <span aria-hidden="true">/</span>}
-          {selectedCategory && <span aria-current="page">{selectedCategory.title}</span>}
-        </nav>
-        <p className="eyebrow">Industrial SF6 Solutions</p>
         {selectedCategory ? (
-          <h1>
-            <span className="h1-line"><span className="h1-navy">{selectedCategory.title}</span></span>
-          </h1>
+          <div className="page-hero-card-body">
+            <div className="page-hero-meta">
+              <nav className="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href={productPageBase}>Products</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">{selectedCategory.title}</span>
+              </nav>
+              <p className="eyebrow">{selectedCategory.tag}</p>
+            </div>
+            <CategoryHeroTitle title={selectedCategory.title} />
+            <p className="copy">{selectedCategory.text}</p>
+          </div>
         ) : (
-          <h1>
-            <span className="h1-line"><span className="h1-navy">Our</span> <span className="h1-orange">Product</span></span>
-            <span className="h1-line"><span className="h1-navy">Range</span></span>
-          </h1>
+          <>
+            <nav className="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span aria-hidden="true">/</span>
+              <a href={productPageBase}>Products</a>
+            </nav>
+            <p className="eyebrow">Industrial SF6 Solutions</p>
+            <h1>
+              <span className="h1-line"><span className="h1-navy">Our</span> <span className="h1-orange">Product</span></span>
+              <span className="h1-line"><span className="h1-navy">Range</span></span>
+            </h1>
+            <p className="copy">Complete range of SF6 gas handling equipment, accessories, measuring instruments and calibration support for reliable field operation.</p>
+          </>
         )}
-        <p className="copy">{selectedCategory?.text || "Complete range of SF6 gas handling equipment, accessories, measuring instruments and calibration support for reliable field operation."}</p>
       </div>
     </section>
   );
@@ -425,14 +481,33 @@ function ProductItemCard({ item, category }) {
   );
 }
 
+function ProductDetailListItem({ children, className = "" }) {
+  return (
+    <li className={className}>
+      <span className="detail-list-icon" aria-hidden="true" />
+      <span className="detail-list-text">{children}</span>
+    </li>
+  );
+}
+
 function ProductDetailPage({ category, product }) {
   const detail = productDetails(product, category);
   const gallery = [...new Set([product.image, category.image, "/assets/products/product-1.jpg", "/assets/products/product-2.jpg", "/assets/products/product-3.jpg"])];
   const [activeIndex, setActiveIndex] = useState(0);
+  const thumbsRef = useRef(null);
   const activeImage = gallery[activeIndex];
   const specHighlights = detail.specs.slice(1, 7);
   const showPreviousImage = () => setActiveIndex((activeIndex - 1 + gallery.length) % gallery.length);
   const showNextImage = () => setActiveIndex((activeIndex + 1) % gallery.length);
+
+  useLayoutEffect(() => {
+    const thumbTrack = thumbsRef.current;
+    const activeThumb = thumbTrack?.querySelector(".product-thumb.is-active");
+    if (!thumbTrack || !activeThumb) return;
+
+    const nextScrollLeft = activeThumb.offsetLeft - (thumbTrack.clientWidth - activeThumb.clientWidth) / 2;
+    thumbTrack.scrollTo({ left: nextScrollLeft, behavior: "smooth" });
+  }, [activeIndex]);
 
   return (
     <section className="single-product-page" aria-labelledby="single-product-heading">
@@ -451,11 +526,11 @@ function ProductDetailPage({ category, product }) {
       <div className="product-showcase container">
         <div className="product-gallery-panel">
           <div className="product-detail-image">
-            <img src={activeImage} alt={product.alt} />
+            <img key={activeImage} src={activeImage} alt={product.alt} />
           </div>
           <div className="product-gallery-controls">
             <button className="gallery-arrow" type="button" aria-label="Previous image" onClick={showPreviousImage}>{"<"}</button>
-            <div className="product-thumbs" aria-label={`${product.title} gallery`}>
+            <div className="product-thumbs" ref={thumbsRef} aria-label={`${product.title} gallery`}>
               {gallery.map((image, index) => (
                 <button
                   className={activeIndex === index ? "product-thumb is-active" : "product-thumb"}
@@ -499,7 +574,7 @@ function ProductDetailPage({ category, product }) {
           <h2 id="product-features-heading">Key Features</h2>
           <ul>
             {detail.features.map((feature) => (
-              <li key={feature}>{feature}</li>
+              <ProductDetailListItem key={feature}>{feature}</ProductDetailListItem>
             ))}
           </ul>
         </section>
@@ -508,7 +583,7 @@ function ProductDetailPage({ category, product }) {
           <h2 id="product-applications-heading">Applications</h2>
           <ul>
             {detail.applications.map((application) => (
-              <li key={application}>{application}</li>
+              <ProductDetailListItem key={application}>{application}</ProductDetailListItem>
             ))}
           </ul>
         </section>
@@ -529,18 +604,18 @@ function ProductDetailPage({ category, product }) {
 
         <aside className="product-detail-notes" aria-label="Product support notes">
           <article>
-            <span className="note-icon"><Icon name="shield" /></span>
-            <div>
+            <div className="note-head">
+              <span className="note-icon"><Icon name="shield" /></span>
               <h3>Safety First</h3>
-              <p>Our units are designed with multiple safety-focused provisions for controlled industrial operation.</p>
             </div>
+            <p>Our units are designed with multiple safety-focused provisions for controlled industrial operation.</p>
           </article>
           <article className="note-warm">
-            <span className="note-icon"><Icon name="settings" /></span>
-            <div>
+            <div className="note-head">
+              <span className="note-icon"><Icon name="settings" /></span>
               <h3>Customization Available</h3>
-              <p>We offer customization as per customer requirements. Contact us for your specific needs.</p>
             </div>
+            <p>We offer customization as per customer requirements. Contact us for your specific needs.</p>
           </article>
         </aside>
       </div>
@@ -700,6 +775,18 @@ function ProductPage() {
   const selectedProduct = selectedCategory?.items
     .map((item) => normalizeProduct(item, selectedCategory))
     .find((product) => product.slug === selectedProductSlug);
+
+  useLayoutEffect(() => {
+    document.querySelectorAll(".product-page-shell [data-reveal-applied]").forEach((element) => {
+      delete element.dataset.revealApplied;
+      element.classList.remove("is-visible");
+      element.removeAttribute("data-reveal");
+      element.style.removeProperty("--reveal-delay");
+    });
+
+    window.scrollTo(0, 0);
+    return initScrollAnimations();
+  }, [selectedSlug, selectedProductSlug]);
 
   return (
     <div className="app-shell product-page-shell">

@@ -507,6 +507,7 @@ const pageMarkup = `
     </section>
 
     <!-- ========== FAQ + Contact CTA Card ========== -->
+    <!-- ========== FAQ + Contact CTA Card ========== -->
     <section class="faq-section" aria-labelledby="faq-heading">
       <div class="container faq-layout">
         <div class="faq-main">

@@ -92,6 +92,8 @@ function Header() {
   );
 }
 
+const clientCardAnims = ["animate-slide-left", "animate-slide-top", "animate-slide-bottom", "animate-slide-right"];
+
 function ClientPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -167,39 +169,31 @@ function ClientPage() {
               <p className="client-group-subtitle">All India Presence</p>
               <h3 className="client-group-title">Utility</h3>
               <div className="client-logo-grid">
-                {utilityClients.map((item, index) => {
-                  const anims = ["animate-slide-left", "animate-slide-top", "animate-slide-bottom", "animate-slide-right"];
-                  const animClass = anims[index % 4];
-                  return (
+                {utilityClients.map((item, index) => (
                     <div
                       key={item.name}
-                      className={`client-logo-card ${animClass}`}
+                      className={`client-logo-card ${clientCardAnims[index % 4]}`}
                       style={{ animationDelay: `${index * 0.08}s` }}
                     >
                       <img src={item.image} alt={item.name} className="client-logo-img" />
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
 
-            <div className="client-group-wrapper" style={{ marginTop: '60px' }}>
+            <div className="client-group-wrapper" style={{ marginTop: "60px" }}>
               <p className="client-group-subtitle">All India Presence</p>
               <h3 className="client-group-title">OEM</h3>
               <div className="client-logo-grid client-logo-grid-oem">
-                {oemClients.map((item, index) => {
-                  const anims = ["animate-slide-left", "animate-slide-top", "animate-slide-bottom", "animate-slide-right"];
-                  const animClass = anims[index % 4];
-                  return (
+                {oemClients.map((item, index) => (
                     <div
                       key={item.name}
-                      className={`client-logo-card ${animClass}`}
+                      className={`client-logo-card ${clientCardAnims[index % 4]}`}
                       style={{ animationDelay: `${index * 0.08}s` }}
                     >
                       <img src={item.image} alt={item.name} className="client-logo-img" />
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
           </div>

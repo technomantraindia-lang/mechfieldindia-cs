@@ -31,13 +31,22 @@ function App() {
       const trigger = event.target.closest("a, button");
       if (!trigger) return;
 
+      const text = trigger.textContent?.trim().toLowerCase() ?? "";
       const isQuoteTrigger =
         trigger.classList.contains("btn-quote") ||
-        trigger.textContent?.trim().toLowerCase().includes("request a quote");
+        trigger.classList.contains("nav-quote-btn") ||
+        text.includes("request a quote") ||
+        text.includes("send enquiry");
 
       if (!isQuoteTrigger) return;
 
       event.preventDefault();
+
+      const mainNav = document.querySelector(".main-nav");
+      const menuToggle = document.querySelector(".menu-toggle");
+      mainNav?.classList.remove("is-open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+
       setIsQuoteOpen(true);
     };
 
@@ -95,6 +104,15 @@ function App() {
         document.removeEventListener("click", handleDocumentClick);
       };
     }
+
+    document.querySelectorAll(".main-nav").forEach((nav) => {
+      if (nav.querySelector(".nav-quote-btn")) return;
+      const link = document.createElement("a");
+      link.href = "#";
+      link.className = "btn btn-quote nav-quote-btn";
+      link.textContent = "Request a Quote";
+      nav.appendChild(link);
+    });
 
     // ── Products dropdown (mobile tap to open) ──
     document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {

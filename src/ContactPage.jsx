@@ -138,7 +138,7 @@ function ContactPage() {
         {/* Contact Form and Details Section */}
         <section className="contact-main-section">
           <div className="container">
-            <div className="contact-main-wrapper animate-slide-bottom">
+            <div className="contact-main-wrapper">
               <div className="contact-main-grid">
 
                 {/* Left Side: Contact Details */}
@@ -301,7 +301,7 @@ function ContactPage() {
         {/* Location & Map Section */}
         <section className="contact-presence-section">
           <div className="container">
-            <div className="presence-main-wrapper animate-slide-bottom" style={{ animationDelay: '0.2s' }}>
+            <div className="presence-main-wrapper">
               <div className="presence-grid">
 
                 {/* Left Side: Address Details */}

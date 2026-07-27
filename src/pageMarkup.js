@@ -175,6 +175,7 @@ const pageMarkup = `
             <div class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2v6L4 20a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 20L14 8V2"/><path d="M8.5 2h7M7 16h10"/></svg></div>
             <div class="stat-content">
               <p class="stat-title">
+                <span class="stat-line"><span class="stat-navy">ISO/IEC 17025:2017</span></span>
                 <span class="stat-line"><span class="stat-navy">NABL Accredited</span></span>
                 <span class="stat-line"><span class="stat-orange">Laboratory</span></span>
               </p>

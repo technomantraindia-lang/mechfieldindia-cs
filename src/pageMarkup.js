@@ -75,26 +75,78 @@ const pageMarkup = `
 
   <main>
     <!-- ========== Hero Banner ========== -->
-    <section class="hero" aria-label="Premium SF6 Gas Handling Equipment">
-      <div class="hero-bg" aria-hidden="true">
-        <img src="assets/banera/home1.png" alt="">
-      </div>
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
-          <h1>
-            <span class="h1-line"><span class="h1-navy">Premium</span> <span class="h1-orange">SF6 Gas</span></span>
-            <span class="h1-line"><span class="h1-navy">Handling</span> <span class="h1-orange">Equipment</span></span>
-          </h1>
-          <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="pages/prodcut.html">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
-            <a class="btn btn-outline" href="#">Request a Quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+    <section class="hero" aria-label="One stop solution for SF6 Gas Handling">
+      <div class="hero-banner-track">
+        <div class="hero-banner-slide">
+          <div class="hero-bg" aria-hidden="true">
+            <img src="assets/banera/home1.png" alt="">
           </div>
-          <div class="hero-points">
-            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Reliable Performance</span>
-            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Global Standards</span>
-            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Trusted by Experts</span>
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
+              <h1>
+                <span class="h1-line"><span class="h1-navy">One stop solution for</span></span>
+                <span class="h1-line"><span class="h1-orange">SF6 Gas Handling</span></span>
+              </h1>
+              <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="pages/prodcut.html">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+                <a class="btn btn-outline" href="#">Request a Quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+              </div>
+              <div class="hero-points">
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Reliable Performance</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Global Standards</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Trusted by Experts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-banner-slide" aria-hidden="true">
+          <div class="hero-bg" aria-hidden="true">
+            <img src="assets/banera/home1.png" alt="">
+          </div>
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
+              <h1>
+                <span class="h1-line"><span class="h1-navy">One stop solution for</span></span>
+                <span class="h1-line"><span class="h1-orange">SF6 Gas Handling</span></span>
+              </h1>
+              <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="pages/prodcut.html">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+                <a class="btn btn-outline" href="#">Request a Quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+              </div>
+              <div class="hero-points">
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Reliable Performance</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Global Standards</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Trusted by Experts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-banner-slide" aria-hidden="true">
+          <div class="hero-bg" aria-hidden="true">
+            <img src="assets/banera/home1.png" alt="">
+          </div>
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
+              <h1>
+                <span class="h1-line"><span class="h1-navy">One stop solution for</span></span>
+                <span class="h1-line"><span class="h1-orange">SF6 Gas Handling</span></span>
+              </h1>
+              <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="pages/prodcut.html">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+                <a class="btn btn-outline" href="#">Request a Quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+              </div>
+              <div class="hero-points">
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Reliable Performance</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Global Standards</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Trusted by Experts</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -108,7 +160,7 @@ const pageMarkup = `
           <article class="stat">
             <div class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
             <div class="stat-content">
-              <p class="stat-title"><span class="stat-navy">Since</span> <span class="stat-orange">1993</span></p>
+              <p class="stat-title"><span class="stat-navy">Since</span> <span class="stat-orange">2015</span></p>
               <span class="stat-desc">Delivering Trust for Over 3 Decades</span>
             </div>
           </article>

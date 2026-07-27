@@ -13,6 +13,48 @@ import ContactPage from "./ContactPage.jsx";
 import QuotePopup from "./QuotePopup.jsx";
 import { initScrollAnimations } from "./scrollAnimations.js";
 
+const SF6_SKIP_SELECTOR = "script, style, textarea, select, option, svg, .sf6-mark";
+
+function formatSf6Text(root = document.body) {
+  if (!root) return;
+
+  const textNodes = [];
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue.includes("SF6")) return NodeFilter.FILTER_REJECT;
+      if (node.parentElement?.closest(SF6_SKIP_SELECTOR)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  while (walker.nextNode()) {
+    textNodes.push(walker.currentNode);
+  }
+
+  textNodes.forEach((node) => {
+    const fragment = document.createDocumentFragment();
+    const parts = node.nodeValue.split("SF6");
+
+    parts.forEach((part, index) => {
+      if (part) fragment.appendChild(document.createTextNode(part));
+      if (index === parts.length - 1) return;
+
+      const mark = document.createElement("span");
+      mark.className = "sf6-mark";
+      mark.appendChild(document.createTextNode("SF"));
+
+      const six = document.createElement("span");
+      six.className = "sf6-mark-six";
+      six.textContent = "6";
+      mark.appendChild(six);
+
+      fragment.appendChild(mark);
+    });
+
+    node.replaceWith(fragment);
+  });
+}
+
 function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const pathname = window.location.pathname.toLowerCase();
@@ -25,6 +67,11 @@ function App() {
   useLayoutEffect(() => {
     return initScrollAnimations();
   }, [isAboutPage, isProductPage, isCertificatePage, isClientPage, isContactPage]);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => formatSf6Text());
+    return () => cancelAnimationFrame(frame);
+  }, [isAboutPage, isProductPage, isCertificatePage, isClientPage, isContactPage, isQuoteOpen]);
 
   useEffect(() => {
     const handleQuoteClick = (event) => {

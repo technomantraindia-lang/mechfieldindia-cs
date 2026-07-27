@@ -2,6 +2,20 @@ import { useEffect, useState } from "react";
 
 const certificates = [
   {
+    title: "ISO 9001:2015 Certification",
+    image: "/assets/certifiaction/ISO CERTIFICATE, 06122024_260625_103915_page-0001.jpg",
+    description:
+      "Certified quality management system reflecting consistent process control, reliability and continual improvement.",
+    icon: "award"
+  },
+  {
+    title: "IEC Certification",
+    image: "/assets/certifiaction/IEC CERTIFICATE_260625_104144_page-0001.png",
+    description:
+      "IEC certification supporting compliance with recognized electrical and industrial quality standards.",
+    icon: "document"
+  },
+  {
     title: "NABL Accredited Calibration Laboratory",
     image: "/assets/certifiaction/NABL CERTIFICATE_260625_104038_page-0001.jpg",
     description:

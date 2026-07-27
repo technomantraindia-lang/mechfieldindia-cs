@@ -25,6 +25,14 @@
   --shadow-lg: 0 24px 70px rgba(8, 42, 60, 0.16);
 }
 
+@font-face {
+  font-family: "Bremen Bd BT";
+  src: url("/assets/fonts/BREMENB.TTF") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -38,6 +46,22 @@ body {
     linear-gradient(180deg, #ffffff 0%, #f6fafb 42%, #ffffff 100%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+.sf6-mark {
+  font-weight: inherit;
+  white-space: nowrap;
+}
+
+.sf6-mark-six {
+  display: inline-block;
+  font-size: 0.78em;
+  line-height: 1;
+  vertical-align: 0.08em;
+}
+
+.hero-copy h1 .sf6-mark-six {
+  vertical-align: -0.04em;
 }
 
 a {
@@ -426,6 +450,50 @@ svg {
   object-fit: cover;
   object-position: center right;
   filter: saturate(1.08) contrast(1.03);
+}
+
+.hero-banner-track {
+  display: flex;
+  width: 300%;
+  min-height: inherit;
+  animation: heroBannerSlide 12s ease-in-out infinite;
+}
+
+.hero-banner-slide {
+  position: relative;
+  flex: 0 0 33.3333%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-banner-slide::before {
+  display: none;
+}
+
+@keyframes heroBannerSlide {
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+
+  38%,
+  62% {
+    transform: translateX(-33.3333%);
+  }
+
+  75%,
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-banner-track {
+    animation: none;
+  }
 }
 
 .hero-inner {
@@ -4191,7 +4259,7 @@ svg {
 }
 
 .hero::before {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 48%, rgba(255, 255, 255, 0) 100%);
+  display: none;
 }
 
 .hero::after {
@@ -4220,12 +4288,20 @@ svg {
   text-shadow: none;
 }
 
+.hero-copy h1 .h1-navy {
+  color: #052f45;
+}
+
+.hero-copy h1 .h1-orange {
+  color: #f05a1f;
+}
+
 .copy {
   max-width: 410px;
   margin: 16px 0 22px;
-  color: #637986;
+  color: #315a6a;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .btn {
@@ -5459,12 +5535,13 @@ svg {
 }
 
 .about-panel h2 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Bremen Bd BT", "Times New Roman", Times, serif;
 }
 
 .about-title-line {
   display: block;
   white-space: nowrap;
+  font-family: "Bremen Bd BT", "Times New Roman", Times, serif;
   font-size: clamp(24px, 2.15vw, 32px);
   line-height: 1.08;
   letter-spacing: 0;

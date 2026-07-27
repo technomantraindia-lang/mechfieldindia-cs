@@ -193,7 +193,7 @@ const productCategories = [
     text: "Efficient recovery, evacuation and transfer systems for substation maintenance.",
     image: "/assets/category/SF6 Gas Recovery & Transfer Units.png",
     alt: "SF6 Gas Recovery and Transfer Units",
-    items: ["SFX-3000C", "SFX-2000C", "SFX-1400C", "SFX-45D T150", "SFX-12C T300", "SFX-10T26", "EVAF-001", "EVAF-002"]
+    items: ["SFX-3000C", "SFX-2000C", "SFX-1400C", "SFX-12C T300", "EVAF-001", "EVAF-002"]
   },
   {
     tag: "Portable",

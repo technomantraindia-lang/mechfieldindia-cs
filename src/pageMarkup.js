@@ -86,7 +86,7 @@ const pageMarkup = `
               <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
               <h1>
                 <span class="h1-line"><span class="h1-navy">One stop solution for</span></span>
-                <span class="h1-line"><span class="h1-orange">SF6 Gas Handling</span></span>
+                <span class="h1-line"><span class="h1-orange"><span class="sf6-mark">SF<span class="sf6-mark-six">6</span></span> Gas Handling</span></span>
               </h1>
               <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
               <div class="hero-actions">
@@ -110,7 +110,7 @@ const pageMarkup = `
               <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
               <h1>
                 <span class="h1-line"><span class="h1-navy">One stop solution for</span></span>
-                <span class="h1-line"><span class="h1-orange">SF6 Gas Handling</span></span>
+                <span class="h1-line"><span class="h1-orange"><span class="sf6-mark">SF<span class="sf6-mark-six">6</span></span> Gas Handling</span></span>
               </h1>
               <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
               <div class="hero-actions">
@@ -134,7 +134,7 @@ const pageMarkup = `
               <p class="eyebrow">Engineered for Safety. Built for Performance.</p>
               <h1>
                 <span class="h1-line"><span class="h1-navy">One stop solution for</span></span>
-                <span class="h1-line"><span class="h1-orange">SF6 Gas Handling</span></span>
+                <span class="h1-line"><span class="h1-orange"><span class="sf6-mark">SF<span class="sf6-mark-six">6</span></span> Gas Handling</span></span>
               </h1>
               <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
               <div class="hero-actions">
@@ -969,7 +969,7 @@ const pageMarkup = `
                 </div>
                 <div class="detail-content">
                   <h4>ADDRESS</h4>
-                  <p>49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Vadodara-391243, Gujarat, India.</p>
+                  <p><a href="https://maps.app.goo.gl/dCzrhQESTXW1nv9Y7" target="_blank" rel="noopener noreferrer">49, Aatmiya Brookfieldz Industrial Park, Village-Untiya, NH-48, Nr. Por, Vadodara-391243, Gujarat, India.</a></p>
                 </div>
               </div>
               
@@ -1132,7 +1132,7 @@ const pageMarkup = `
           <address class="footer-contact-list">
             <div class="footer-contact-item">
               <span class="footer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <span>49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.</span>
+              <span><a href="https://maps.app.goo.gl/dCzrhQESTXW1nv9Y7" target="_blank" rel="noopener noreferrer">49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.</a></span>
             </div>
             <div class="footer-contact-item">
               <span class="footer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>

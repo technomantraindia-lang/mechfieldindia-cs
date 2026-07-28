@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+const mapLink = "https://maps.app.goo.gl/dCzrhQESTXW1nv9Y7";
+
 function Icon({ name }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" };
 
@@ -265,7 +267,11 @@ function ClientPage() {
               <address className="footer-contact-list">
                 <div className="footer-contact-item">
                   <span className="footer-icon" aria-hidden="true"><Icon name="pin" /></span>
-                  <span>49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.</span>
+                  <span>
+                    <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                      49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.
+                    </a>
+                  </span>
                 </div>
                 <div className="footer-contact-item">
                   <span className="footer-icon" aria-hidden="true"><Icon name="phone" /></span>

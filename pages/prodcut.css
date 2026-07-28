@@ -4558,46 +4558,6 @@ body:has(.product-page-shell) {
   filter: saturate(0.95) contrast(1.02);
 }
 
-.map-floating-card {
-  position: absolute;
-  left: 18px;
-  bottom: 18px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  max-width: calc(100% - 36px);
-  padding: 13px 15px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 16px 36px rgba(3, 43, 71, 0.16);
-  backdrop-filter: blur(8px);
-}
-
-.map-floating-card > svg {
-  width: 22px;
-  height: 22px;
-  color: #ff6a21;
-  flex-shrink: 0;
-}
-
-.map-floating-card strong,
-.map-floating-card span {
-  display: block;
-}
-
-.map-floating-card strong {
-  color: #092743;
-  font-size: 13px;
-  margin-bottom: 2px;
-}
-
-.map-floating-card span {
-  color: #617781;
-  font-size: 12px;
-  font-weight: 700;
-}
-
 @media (max-width: 980px) {
   .contact-panel-header,
   .contact-main-grid,

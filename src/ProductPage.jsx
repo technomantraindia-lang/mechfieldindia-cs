@@ -1,6 +1,8 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { initScrollAnimations } from "./scrollAnimations.js";
 
+const mapLink = "https://maps.app.goo.gl/dCzrhQESTXW1nv9Y7";
+
 /**
  * Products page — built with React components.
  * Sections: TopBar → Header → Hero → Catalog → CTA → Footer
@@ -735,7 +737,11 @@ function Footer() {
             <address className="footer-contact-list">
               <div className="footer-contact-item">
                 <span className="footer-icon" aria-hidden="true"><Icon name="pin" /></span>
-                <span>49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.</span>
+                <span>
+                  <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                    49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.
+                  </a>
+                </span>
               </div>
               <div className="footer-contact-item">
                 <span className="footer-icon" aria-hidden="true"><Icon name="phone" /></span>

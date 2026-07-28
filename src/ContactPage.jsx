@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+const mapLink = "https://maps.app.goo.gl/dCzrhQESTXW1nv9Y7";
+
 function Icon({ name }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" };
 
@@ -331,7 +333,7 @@ function ContactPage() {
                   </div>
 
                   <a
-                    href="https://maps.google.com/?q=Aatmiya+Brookfieldz+Industrial+Park+Vadodara"
+                    href={mapLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-orange-fill presence-directions-btn"
@@ -342,22 +344,15 @@ function ContactPage() {
 
                 {/* Right Side: Google Map Iframe */}
                 <div className="presence-map-column">
-                  <div className="map-floating-card">
-                    <Icon name="factory" />
-                    <div>
-                      <strong>Industrial Park, Vadodara</strong>
-                      <span>NH-48, near Por</span>
-                    </div>
-                  </div>
                   <iframe
                     title="Mechfield India Location Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.9961671987523!2d73.1818296760599!3d22.183204946452815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcb08bf098251%3A0xb3debb98d413346e!2sAatmiya%20Brookfieldz%20Industrial%20Park!5e0!3m2!1sen!2sin!4v1719825000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.2484845607655!2d73.18952689999999!3d22.154611499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc3c8c66f3e7d%3A0xb37efe17ece3418c!2sAatmiya%20Brookfield%20Industrial%20Park!5e0!3m2!1sen!2sin!4v1785209875510!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0, borderRadius: '16px', minHeight: '380px', display: 'block' }}
                     allowFullScreen=""
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    referrerPolicy="strict-origin-when-cross-origin"
                   ></iframe>
                 </div>
 
@@ -414,7 +409,11 @@ function ContactPage() {
               <address className="footer-contact-list">
                 <div className="footer-contact-item">
                   <span className="footer-icon" aria-hidden="true"><Icon name="pin" /></span>
-                  <span>49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.</span>
+                  <span>
+                    <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                      49, AATMIYA BROOKFIELDZ INDUSTRIAL PARK, VILLAGE-UNTIYA, NH-48, NR. POR, DIST - VADODARA-391243, GUJARAT, INDIA.
+                    </a>
+                  </span>
                 </div>
                 <div className="footer-contact-item">
                   <span className="footer-icon" aria-hidden="true"><Icon name="phone" /></span>

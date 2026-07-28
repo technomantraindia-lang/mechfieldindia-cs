@@ -214,7 +214,7 @@ const pageMarkup = `
         <div class="about-panel">
           <p class="section-label">About Us</p>
           <h2 id="about-heading">
-            <span class="about-title-line"><span class="h2-navy">Mechfield</span> <span class="h2-orange">Technologies</span> <span class="h2-navy">Pvt. Ltd.</span></span>
+            <span class="about-title-line"><span class="h2-navy">Mechfield</span> <span class="h2-orange">Technologies</span> <span class="h2-navy">PRIVATE LIMITED</span></span>
           </h2>
           <p class="about-lead">Established in 1993, we design, develop and manufacture speciality gas handling products trusted by industries worldwide.</p>
           <p>Our comprehensive range includes Regulators, Valves, Flash Back Arrestors, Laboratory Furniture and SF6 Gas Handling Equipment — built for longer service life, corrosion resistance and tough construction.</p>

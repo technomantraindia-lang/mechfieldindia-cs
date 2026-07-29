@@ -1278,7 +1278,20 @@
 }
 
 .category-product-card .pg-card-img-wrap {
-  height: 190px;
+  display: grid;
+  place-items: center;
+  height: 220px;
+  padding: 14px 18px;
+  background: #eef4f7;
+}
+
+.category-product-card .pg-card-img-wrap img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.category-product-card:hover .pg-card-img-wrap img {
+  transform: scale(1.03);
 }
 
 .category-product-card .pg-card-info h3 {
@@ -1905,7 +1918,7 @@ body:has(.product-page-shell) {
   width: 100%;
   height: clamp(390px, 38vw, 455px);
   min-height: 0;
-  padding: 0;
+  padding: clamp(20px, 2.4vw, 34px);
   border: 0;
   border-radius: 18px;
   background: #fff;
@@ -1918,10 +1931,13 @@ body:has(.product-page-shell) {
   display: block;
   width: 100%;
   height: 100%;
-  max-height: none;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   object-position: center;
   filter: none;
+  transform: scale(0.92);
+  transform-origin: center;
 }
 
 .product-gallery-controls {
@@ -1960,18 +1976,29 @@ body:has(.product-page-shell) {
 }
 
 .product-gallery-controls .product-thumbs {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(72px, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 12px;
   max-width: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  grid-template-columns: unset;
+}
+
+.product-gallery-controls .product-thumbs::-webkit-scrollbar {
+  display: none;
 }
 
 .product-gallery-controls .product-thumb {
+  flex: 0 0 calc((100% - 36px) / 4);
+  min-width: 0;
   height: 66px;
   padding: 0;
   border: 1px solid #d7dde5;
   border-radius: 6px;
   background: #fff;
+  scroll-snap-align: center;
 }
 
 .product-gallery-controls .product-thumb.is-active {
@@ -2767,7 +2794,8 @@ body:has(.product-page-shell) {
   }
 
   .category-product-card .pg-card-img-wrap {
-    height: 160px;
+    height: 190px;
+    padding: 12px 14px;
   }
 
   .product-breadcrumb-bar .product-breadcrumb {
@@ -2811,7 +2839,7 @@ body:has(.product-page-shell) {
   .product-gallery-panel .product-detail-image {
     min-height: 0;
     height: clamp(300px, 84vw, 360px);
-    padding: 0;
+    padding: 16px;
     border-radius: 14px;
     background: #fff;
   }
@@ -2819,11 +2847,13 @@ body:has(.product-page-shell) {
   .product-gallery-panel .product-detail-image img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
     min-height: 0;
-    max-height: none;
-    object-fit: cover;
+    max-height: 100%;
+    object-fit: contain;
     object-position: center;
     background: #fff;
+    transform: scale(0.92);
   }
 
   .product-gallery-controls {

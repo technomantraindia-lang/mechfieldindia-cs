@@ -195,7 +195,38 @@ const productCategories = [
     text: "Efficient recovery, evacuation and transfer systems for substation maintenance.",
     image: "/assets/category/SF6 Gas Recovery & Transfer Units.png",
     alt: "SF6 Gas Recovery and Transfer Units",
-    items: ["SFX-3000C", "SFX-2000C", "SFX-1400C", "SFX-12C T300", "EVAF-001", "EVAF-002"]
+    items: [
+      {
+        title: "SFX-3000C",
+        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX3000C.png",
+        alt: "SFX-3000C SF6 gas recovery and transfer unit"
+      },
+      {
+        title: "SFX-2000C",
+        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX2000C.png",
+        alt: "SFX-2000C SF6 gas recovery and transfer unit"
+      },
+      {
+        title: "SFX-1400C",
+        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX1400C.png",
+        alt: "SFX-1400C SF6 gas recovery and transfer unit"
+      },
+      {
+        title: "SFX-12C T300",
+        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX-12C T300.png",
+        alt: "SFX-12C T300 SF6 gas recovery and transfer unit"
+      },
+      {
+        title: "EVAF-001",
+        image: "/assets/products/SF6 Gas Recovery & Transfer Units/EVAF-001.png",
+        alt: "EVAF-001 SF6 gas recovery and transfer unit"
+      },
+      {
+        title: "EVAF-002",
+        image: "/assets/products/SF6 Gas Recovery & Transfer Units/EVAF-002.png",
+        alt: "EVAF-002 SF6 gas recovery and transfer unit"
+      }
+    ]
   },
   {
     tag: "Portable",
@@ -320,7 +351,7 @@ function Header() {
     <header className="site-header">
       <div className="header-inner">
         <a className="brand" href="/" aria-label="Mechfield India home">
-          <img src="/assets/logo.png" alt="Mechfield India" />
+          <img src="/assets/logo.png?v=20260728-new" alt="Mechfield India" />
         </a>
         <button className="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -698,7 +729,7 @@ function Footer() {
       <div className="footer-main">
         <div className="container footer-grid">
           <section className="footer-brand">
-            <img src="/assets/logo.png" alt="Mechfield India" className="footer-logo" />
+            <img src="/assets/logo.png?v=20260728-new" alt="Mechfield India" className="footer-logo" />
             <p className="footer-about">Established in 1993 - manufacturing and supplying Regulators, Valves, Gas Regulators, Flash Back Arrestors and Laboratory Furniture trusted by industries worldwide.</p>
             <div className="footer-social">
               <a href="#" aria-label="LinkedIn"><Icon name="linkedin" /></a>

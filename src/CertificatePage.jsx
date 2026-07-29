@@ -130,7 +130,7 @@ function Header() {
     <header className="site-header">
       <div className="header-inner">
         <a className="brand" href="/" aria-label="Mechfield India home">
-          <img src="/assets/logo.png" alt="Mechfield India" />
+          <img src="/assets/logo.png?v=20260728-new" alt="Mechfield India" />
         </a>
         <button className="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -307,7 +307,7 @@ function CertificatePage() {
         <div className="footer-main">
           <div className="container footer-grid">
             <section className="footer-brand">
-              <img src="/assets/logo.png" alt="Mechfield India" className="footer-logo" />
+              <img src="/assets/logo.png?v=20260728-new" alt="Mechfield India" className="footer-logo" />
               <p className="footer-about">Established in 1993 — manufacturing and supplying Regulators, Valves, Gas Regulators, Flash Back Arrestors and Laboratory Furniture trusted by industries worldwide.</p>
               <div className="footer-social">
                 <a href="#" aria-label="LinkedIn"><Icon name="linkedin" /></a>

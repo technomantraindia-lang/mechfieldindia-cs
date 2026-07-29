@@ -42,7 +42,7 @@ const pageMarkup = `
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#" aria-label="Mechfield India home">
-        <img src="assets/logo.png" alt="Mechfield India">
+        <img src="assets/logo.png?v=20260728-new" alt="Mechfield India">
       </a>
       <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -1091,7 +1091,7 @@ const pageMarkup = `
     <div class="footer-main">
       <div class="container footer-grid">
         <section class="footer-brand">
-          <img src="assets/logo.png" alt="Mechfield India" class="footer-logo">
+          <img src="assets/logo.png?v=20260728-new" alt="Mechfield India" class="footer-logo">
           <p class="footer-about">Established in 1993 — manufacturing and supplying Regulators, Valves, Gas Regulators, Flash Back Arrestors and Laboratory Furniture trusted by industries worldwide.</p>
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>

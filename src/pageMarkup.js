@@ -215,7 +215,7 @@ const pageMarkup = `
         <div class="product-grid">
           <a class="product-card" href="pages/prodcut.html?category=sf6-gas-recovery-transfer-units">
             <div class="product-media">
-              <div class="product-img-wrap"><img src="assets/category/SF6 Gas Recovery &amp; Transfer Units.png" alt="SF6 Gas Recovery and Transfer Units"></div>
+              <div class="product-img-wrap"><img src="assets/category/SF6 Gas Recovery &amp; Transfer Units.png?v=20260729-category" alt="SF6 Gas Recovery and Transfer Units"></div>
             </div>
             <div class="product-body">
               <div class="product-info">

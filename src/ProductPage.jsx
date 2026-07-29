@@ -193,7 +193,7 @@ const productCategories = [
     slug: "sf6-gas-recovery-transfer-units",
     title: "SF6 Gas Recovery & Transfer Units",
     text: "Efficient recovery, evacuation and transfer systems for substation maintenance.",
-    image: "/assets/category/SF6 Gas Recovery & Transfer Units.png",
+    image: "/assets/category/SF6 Gas Recovery & Transfer Units.png?v=20260729-category",
     alt: "SF6 Gas Recovery and Transfer Units",
     items: [
       {

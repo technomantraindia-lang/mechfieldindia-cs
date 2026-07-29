@@ -105,6 +105,7 @@ const pageMarkup = `
             <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX-12C T300.png" alt=""></div>
             <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/EVAF-001.png" alt=""></div>
             <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/EVAF-002.png" alt=""></div>
+            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX3000C.png" alt=""></div>
           </div>
         </div>
       </div>

@@ -689,7 +689,8 @@ function ProductDetailListItem({ children, className = "" }) {
 
 function ProductDetailPage({ category, product }) {
   const detail = productDetails(product, category);
-  const gallery = [...new Set(product.gallery?.length ? product.gallery : [product.image])];
+  // Keep product.gallery data available, but show only the primary image for now.
+  const gallery = [product.image];
   const hasGalleryControls = gallery.length > 1;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isImagePreviewOpen, setIsImagePreviewOpen] = useState(false);

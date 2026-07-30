@@ -64,6 +64,7 @@ const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Tran
 const portableVacuumImagePath = (fileName) => `/assets/products/Portable Recovery Vacuum Units/${fileName}`;
 const filterImagePath = (fileName) => `/assets/products/Filters & Moisture Absorbers/${fileName}`;
 const measuringImagePath = (fileName) => `/assets/products/Measuring Instruments/${fileName}`;
+const connectorImagePath = (fileName) => `/assets/products/Gas Connectors & Manifolds/${fileName}`;
 
 const productDetails = (product, category) => {
   const lowerTitle = product.title.toLowerCase();
@@ -388,7 +389,44 @@ const productCategories = [
     text: "Precision connectors and manifold assemblies for leak-free connections.",
     image: "/assets/category/Gas Connectors & Manifolds.png",
     alt: "Gas Connectors and Manifolds",
-    items: ["SF6 Gas Connectors", "Cylinder Adaptors", "Isolation Valves", "Hose", "SF6 Pressure Regulators", "Manifold"]
+    items: [
+      {
+        title: "SF6 Gas Connectors",
+        image: connectorImagePath("SF6 Gas Connectors.png"),
+        gallery: [connectorImagePath("SF6 Gas Connectors.png")],
+        alt: "SF6 gas connectors"
+      },
+      {
+        title: "Cylinder Adaptors",
+        image: connectorImagePath("Cylinder Adaptors.png"),
+        gallery: [connectorImagePath("Cylinder Adaptors.png")],
+        alt: "Cylinder adaptors"
+      },
+      {
+        title: "Isolation Valves",
+        image: connectorImagePath("Isolation Valves.png"),
+        gallery: [connectorImagePath("Isolation Valves.png")],
+        alt: "Isolation valves"
+      },
+      {
+        title: "Hose",
+        image: connectorImagePath("Hose.png"),
+        gallery: [connectorImagePath("Hose.png")],
+        alt: "SF6 gas handling hose"
+      },
+      {
+        title: "SF6 Pressure Regulators",
+        image: connectorImagePath("SF6 Pressure Regulators.png"),
+        gallery: [connectorImagePath("SF6 Pressure Regulators.png")],
+        alt: "SF6 pressure regulators"
+      },
+      {
+        title: "Manifold",
+        image: connectorImagePath("Manifold.png"),
+        gallery: [connectorImagePath("Manifold.png")],
+        alt: "Gas manifold"
+      }
+    ]
   },
   {
     tag: "Filling",
@@ -654,6 +692,7 @@ function ProductDetailPage({ category, product }) {
   const gallery = [...new Set(product.gallery?.length ? product.gallery : [product.image])];
   const hasGalleryControls = gallery.length > 1;
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isImagePreviewOpen, setIsImagePreviewOpen] = useState(false);
   const thumbsRef = useRef(null);
   const activeImage = gallery[activeIndex];
   const specHighlights = detail.specs.slice(1, 7);
@@ -670,6 +709,22 @@ function ProductDetailPage({ category, product }) {
     const nextScrollLeft = activeThumb.offsetLeft - (thumbTrack.clientWidth - activeThumb.clientWidth) / 2;
     thumbTrack.scrollTo({ left: nextScrollLeft, behavior: "smooth" });
   }, [activeIndex, hasGalleryControls]);
+
+  useLayoutEffect(() => {
+    if (!isImagePreviewOpen) return;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setIsImagePreviewOpen(false);
+    };
+
+    document.body.classList.add("product-lightbox-open");
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.classList.remove("product-lightbox-open");
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isImagePreviewOpen]);
 
   return (
     <section className="single-product-page" aria-labelledby="single-product-heading">
@@ -688,7 +743,9 @@ function ProductDetailPage({ category, product }) {
       <div className="product-showcase container">
         <div className="product-gallery-panel">
           <div className="product-detail-image">
-            <img key={activeImage} src={activeImage} alt={product.alt} />
+            <button className="product-detail-image-button" type="button" aria-label={`Enlarge ${product.title} image`} onClick={() => setIsImagePreviewOpen(true)}>
+              <img key={activeImage} src={activeImage} alt={product.alt} />
+            </button>
           </div>
           {hasGalleryControls && (
             <div className="product-gallery-controls">
@@ -732,6 +789,15 @@ function ProductDetailPage({ category, product }) {
           <a className="product-inquiry-btn" href={productInquiryHref(category, product)}>Send Inquiry <Icon name="arrow" /></a>
         </div>
       </div>
+
+      {isImagePreviewOpen && (
+        <div className="product-image-lightbox" role="dialog" aria-modal="true" aria-label={`${product.title} enlarged image`} onClick={() => setIsImagePreviewOpen(false)}>
+          <button className="product-lightbox-close" type="button" aria-label="Close enlarged image" onClick={() => setIsImagePreviewOpen(false)}>x</button>
+          <div className="product-lightbox-frame" onClick={(event) => event.stopPropagation()}>
+            <img src={activeImage} alt={product.alt} />
+          </div>
+        </div>
+      )}
 
       <div className="container product-detail-content">
         <section className="product-detail-section product-key-features" aria-labelledby="product-features-heading">

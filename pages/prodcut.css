@@ -1100,6 +1100,10 @@
   margin-bottom: 72px;
 }
 
+.product-page-shell .pg-catalog > .container {
+  width: min(1320px, calc(100% - 48px));
+}
+
 .pg-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1216,7 +1220,7 @@
 .pg-card-info h3 {
   margin: 0 0 8px;
   color: var(--navy);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   line-height: 1.4;
   transition: color 0.25s;
@@ -1228,10 +1232,10 @@
 
 .pg-card-info p {
   margin: 0;
-  color: var(--muted);
-  font-size: 11px;
+  color: #536f7c;
+  font-size: 13px;
   line-height: 1.55;
-  font-weight: 500;
+  font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1295,7 +1299,7 @@
 }
 
 .category-product-card .pg-card-info h3 {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .sr-only {

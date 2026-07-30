@@ -63,6 +63,7 @@ const normalizeProduct = (item, category) => {
 const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Transfer Units/${fileName}`;
 const portableVacuumImagePath = (fileName) => `/assets/products/Portable Recovery Vacuum Units/${fileName}`;
 const filterImagePath = (fileName) => `/assets/products/Filters & Moisture Absorbers/${fileName}`;
+const measuringImagePath = (fileName) => `/assets/products/Measuring Instruments/${fileName}`;
 
 const productDetails = (product, category) => {
   const lowerTitle = product.title.toLowerCase();
@@ -273,7 +274,7 @@ const productCategories = [
     slug: "portable-recovery-vacuum-units",
     title: "Portable Recovery / Vacuum Units",
     text: "Compact recovery and vacuum units for portable field service applications.",
-    image: portableVacuumImagePath("SFX-10.png"),
+    image: "/assets/category/Filters & Vacuum Units.png",
     alt: "Portable Recovery and Vacuum Units",
     items: [
       {
@@ -304,13 +305,16 @@ const productCategories = [
     slug: "filters-moisture-absorbers",
     title: "Filters & Moisture Absorbers",
     text: "Drier cartridges, particle filters and stand-alone filtration systems.",
-    image: filterImagePath("SF6 Gas Drier Filter Cartridge.png"),
+    image: "/assets/category/Filters & Vacuum Units.png",
     alt: "Filters and Moisture Absorbers",
     items: [
       {
         title: "SF6 Gas Drier Filter Cartridge",
         image: filterImagePath("SF6 Gas Drier Filter Cartridge.png"),
-        gallery: [filterImagePath("SF6 Gas Drier Filter Cartridge.png")],
+        gallery: [
+          filterImagePath("SF6 Gas Drier Filter Cartridge.png"),
+          filterImagePath("SF6 Gas Drier Filter Cartridge-1.png")
+        ],
         alt: "SF6 gas drier filter cartridge"
       },
       {
@@ -344,7 +348,38 @@ const productCategories = [
     text: "Dew point analysers, pressure gauges and monitoring instruments.",
     image: "/assets/category/Measuring Instruments.png",
     alt: "Measuring Instruments",
-    items: ["Dew Point Analyser with Pump Back", "Pressure Pump for Density Monitor Testing", "Pressure Switches & Indicators", "Density Monitor Relay Tester", "Digital Pressure Gauge"]
+    items: [
+      {
+        title: "Dew Point Analyser with Pump Back",
+        image: measuringImagePath("Dew Point Analyser with Pump Back.png"),
+        gallery: [measuringImagePath("Dew Point Analyser with Pump Back.png")],
+        alt: "Dew point analyser with pump back"
+      },
+      {
+        title: "Pressure Pump for Density Monitor Testing",
+        image: measuringImagePath("Pressure Pump for Density Monitor Testing.png"),
+        gallery: [measuringImagePath("Pressure Pump for Density Monitor Testing.png")],
+        alt: "Pressure pump for density monitor testing"
+      },
+      {
+        title: "Pressure Switches & Indicators",
+        image: measuringImagePath("Pressure Switches & Indicators.png"),
+        gallery: [measuringImagePath("Pressure Switches & Indicators.png")],
+        alt: "Pressure switches and indicators"
+      },
+      {
+        title: "Density Monitor Relay Tester",
+        image: measuringImagePath("Density Monitor Relay Tester.png"),
+        gallery: [measuringImagePath("Density Monitor Relay Tester.png")],
+        alt: "Density monitor relay tester"
+      },
+      {
+        title: "Digital Pressure Gauge",
+        image: measuringImagePath("Digital Pressure Gauge.png"),
+        gallery: [measuringImagePath("Digital Pressure Gauge.png")],
+        alt: "Digital pressure gauge"
+      }
+    ]
   },
   {
     tag: "Accessories",
@@ -616,7 +651,8 @@ function ProductDetailListItem({ children, className = "" }) {
 
 function ProductDetailPage({ category, product }) {
   const detail = productDetails(product, category);
-  const gallery = [...new Set(product.gallery || [product.image, category.image, "/assets/products/product-1.jpg", "/assets/products/product-2.jpg", "/assets/products/product-3.jpg"])];
+  const gallery = [...new Set(product.gallery?.length ? product.gallery : [product.image])];
+  const hasGalleryControls = gallery.length > 1;
   const [activeIndex, setActiveIndex] = useState(0);
   const thumbsRef = useRef(null);
   const activeImage = gallery[activeIndex];
@@ -625,13 +661,15 @@ function ProductDetailPage({ category, product }) {
   const showNextImage = () => setActiveIndex((activeIndex + 1) % gallery.length);
 
   useLayoutEffect(() => {
+    if (!hasGalleryControls) return;
+
     const thumbTrack = thumbsRef.current;
     const activeThumb = thumbTrack?.querySelector(".product-thumb.is-active");
     if (!thumbTrack || !activeThumb) return;
 
     const nextScrollLeft = activeThumb.offsetLeft - (thumbTrack.clientWidth - activeThumb.clientWidth) / 2;
     thumbTrack.scrollTo({ left: nextScrollLeft, behavior: "smooth" });
-  }, [activeIndex]);
+  }, [activeIndex, hasGalleryControls]);
 
   return (
     <section className="single-product-page" aria-labelledby="single-product-heading">
@@ -652,23 +690,25 @@ function ProductDetailPage({ category, product }) {
           <div className="product-detail-image">
             <img key={activeImage} src={activeImage} alt={product.alt} />
           </div>
-          <div className="product-gallery-controls">
-            <button className="gallery-arrow" type="button" aria-label="Previous image" onClick={showPreviousImage}>{"<"}</button>
-            <div className="product-thumbs" ref={thumbsRef} aria-label={`${product.title} gallery`}>
-              {gallery.map((image, index) => (
-                <button
-                  className={activeIndex === index ? "product-thumb is-active" : "product-thumb"}
-                  type="button"
-                  aria-label={`Show ${product.title} image ${index + 1}`}
-                  onClick={() => setActiveIndex(index)}
-                  key={`${image}-${index}`}
-                >
-                  <img src={image} alt="" />
-                </button>
-              ))}
+          {hasGalleryControls && (
+            <div className="product-gallery-controls">
+              <button className="gallery-arrow" type="button" aria-label="Previous image" onClick={showPreviousImage}>{"<"}</button>
+              <div className="product-thumbs" ref={thumbsRef} aria-label={`${product.title} gallery`}>
+                {gallery.map((image, index) => (
+                  <button
+                    className={activeIndex === index ? "product-thumb is-active" : "product-thumb"}
+                    type="button"
+                    aria-label={`Show ${product.title} image ${index + 1}`}
+                    onClick={() => setActiveIndex(index)}
+                    key={`${image}-${index}`}
+                  >
+                    <img src={image} alt="" />
+                  </button>
+                ))}
+              </div>
+              <button className="gallery-arrow" type="button" aria-label="Next image" onClick={showNextImage}>{">"}</button>
             </div>
-            <button className="gallery-arrow" type="button" aria-label="Next image" onClick={showNextImage}>{">"}</button>
-          </div>
+          )}
         </div>
 
         <div className="product-info-panel">

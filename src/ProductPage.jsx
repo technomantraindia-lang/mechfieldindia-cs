@@ -828,8 +828,8 @@ function ProductDetailPage({ category, product }) {
 
       {isImagePreviewOpen && (
         <div className="product-image-lightbox" role="dialog" aria-modal="true" aria-label={`${product.title} enlarged image`} onClick={() => setIsImagePreviewOpen(false)}>
-          <button className="product-lightbox-close" type="button" aria-label="Close enlarged image" onClick={() => setIsImagePreviewOpen(false)}>x</button>
           <div className="product-lightbox-frame" onClick={(event) => event.stopPropagation()}>
+            <button className="product-lightbox-close" type="button" aria-label="Close enlarged image" onClick={() => setIsImagePreviewOpen(false)}>x</button>
             <img src={activeImage} alt={product.alt} />
           </div>
         </div>

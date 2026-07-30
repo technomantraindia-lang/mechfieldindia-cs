@@ -60,6 +60,8 @@ const normalizeProduct = (item, category) => {
   };
 };
 
+const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Transfer Units/${fileName}`;
+
 const productDetails = (product, category) => {
   const lowerTitle = product.title.toLowerCase();
   const categoryText = category.title.replace(/s$/i, "");
@@ -198,32 +200,68 @@ const productCategories = [
     items: [
       {
         title: "SFX-3000C",
-        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX3000C.png",
+        image: productImagePath("SFX3000C.png"),
+        gallery: [
+          productImagePath("SFX3000C.png"),
+          productImagePath("SFX3000C-1.png"),
+          productImagePath("SFX3000C-2.png"),
+          productImagePath("SFX3000C-3.png")
+        ],
         alt: "SFX-3000C SF6 gas recovery and transfer unit"
       },
       {
         title: "SFX-2000C",
-        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX2000C.png",
+        image: productImagePath("SFX2000C.png"),
+        gallery: [
+          productImagePath("SFX2000C.png"),
+          productImagePath("SFX2000C-1.png"),
+          productImagePath("SFX2000C-2.png")
+        ],
         alt: "SFX-2000C SF6 gas recovery and transfer unit"
       },
       {
         title: "SFX-1400C",
-        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX1400C.png",
+        image: productImagePath("SFX1400C.png"),
+        gallery: [
+          productImagePath("SFX1400C.png"),
+          productImagePath("SFX1400C-1.png"),
+          productImagePath("SFX1400C-2.png"),
+          productImagePath("SFX1400C-3.png")
+        ],
         alt: "SFX-1400C SF6 gas recovery and transfer unit"
       },
       {
         title: "SFX-12C T300",
-        image: "/assets/products/SF6 Gas Recovery & Transfer Units/SFX-12C T300.png",
+        image: productImagePath("SFX-12C T300.png"),
+        gallery: [
+          productImagePath("SFX-12C T300.png"),
+          productImagePath("SFX-12C T300-1.png"),
+          productImagePath("SFX-12C T300-2.png")
+        ],
         alt: "SFX-12C T300 SF6 gas recovery and transfer unit"
       },
       {
         title: "EVAF-001",
-        image: "/assets/products/SF6 Gas Recovery & Transfer Units/EVAF-001.png",
+        image: productImagePath("EVAF-001.png"),
+        gallery: [
+          productImagePath("EVAF-001.png"),
+          productImagePath("EVAF-001-1.png"),
+          productImagePath("EVAF-001-2.png"),
+          productImagePath("EVAF-001-3.png"),
+          productImagePath("EVAF-001-4.png")
+        ],
         alt: "EVAF-001 SF6 gas recovery and transfer unit"
       },
       {
         title: "EVAF-002",
-        image: "/assets/products/SF6 Gas Recovery & Transfer Units/EVAF-002.png",
+        image: productImagePath("EVAF-002.png"),
+        gallery: [
+          productImagePath("EVAF-002.png"),
+          productImagePath("EVAF-002-1.png"),
+          productImagePath("EVAF-002-2.png"),
+          productImagePath("EVAF-002-3.png"),
+          productImagePath("EVAF-002-4.png")
+        ],
         alt: "EVAF-002 SF6 gas recovery and transfer unit"
       }
     ]
@@ -525,7 +563,7 @@ function ProductDetailListItem({ children, className = "" }) {
 
 function ProductDetailPage({ category, product }) {
   const detail = productDetails(product, category);
-  const gallery = [...new Set([product.image, category.image, "/assets/products/product-1.jpg", "/assets/products/product-2.jpg", "/assets/products/product-3.jpg"])];
+  const gallery = [...new Set(product.gallery || [product.image, category.image, "/assets/products/product-1.jpg", "/assets/products/product-2.jpg", "/assets/products/product-3.jpg"])];
   const [activeIndex, setActiveIndex] = useState(0);
   const thumbsRef = useRef(null);
   const activeImage = gallery[activeIndex];

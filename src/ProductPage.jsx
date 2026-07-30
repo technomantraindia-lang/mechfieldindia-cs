@@ -61,6 +61,8 @@ const normalizeProduct = (item, category) => {
 };
 
 const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Transfer Units/${fileName}`;
+const portableVacuumImagePath = (fileName) => `/assets/products/Portable Recovery Vacuum Units/${fileName}`;
+const filterImagePath = (fileName) => `/assets/products/Filters & Moisture Absorbers/${fileName}`;
 
 const productDetails = (product, category) => {
   const lowerTitle = product.title.toLowerCase();
@@ -271,18 +273,69 @@ const productCategories = [
     slug: "portable-recovery-vacuum-units",
     title: "Portable Recovery / Vacuum Units",
     text: "Compact recovery and vacuum units for portable field service applications.",
-    image: "/assets/category/Filters & Vacuum Units.png",
+    image: portableVacuumImagePath("SFX-10.png"),
     alt: "Portable Recovery and Vacuum Units",
-    items: ["F-002", "VC-100", "SFX-10"]
+    items: [
+      {
+        title: "F-002",
+        image: portableVacuumImagePath("F-002.png"),
+        gallery: [portableVacuumImagePath("F-002.png")],
+        alt: "F-002 portable recovery vacuum unit"
+      },
+      {
+        title: "VC-100",
+        image: portableVacuumImagePath("VC-100.png"),
+        gallery: [
+          portableVacuumImagePath("VC-100.png"),
+          portableVacuumImagePath("VC-100-1.png")
+        ],
+        alt: "VC-100 portable recovery vacuum unit"
+      },
+      {
+        title: "SFX-10",
+        image: portableVacuumImagePath("SFX-10.png"),
+        gallery: [portableVacuumImagePath("SFX-10.png")],
+        alt: "SFX-10 portable recovery vacuum unit"
+      }
+    ]
   },
   {
     tag: "Filters",
     slug: "filters-moisture-absorbers",
     title: "Filters & Moisture Absorbers",
     text: "Drier cartridges, particle filters and stand-alone filtration systems.",
-    image: "/assets/category/Filters & Vacuum Units.png",
+    image: filterImagePath("SF6 Gas Drier Filter Cartridge.png"),
     alt: "Filters and Moisture Absorbers",
-    items: ["SF6 Gas Drier Filter Cartridge", "SF6 Gas Particle Filter", "Stand Alone Filter"]
+    items: [
+      {
+        title: "SF6 Gas Drier Filter Cartridge",
+        image: filterImagePath("SF6 Gas Drier Filter Cartridge.png"),
+        gallery: [filterImagePath("SF6 Gas Drier Filter Cartridge.png")],
+        alt: "SF6 gas drier filter cartridge"
+      },
+      {
+        title: "SF6 Gas Particle Filter",
+        image: filterImagePath("SF6 Gas Particle Filter.png"),
+        gallery: [
+          filterImagePath("SF6 Gas Particle Filter.png"),
+          filterImagePath("SF6 Gas Particle Filter-1.png"),
+          filterImagePath("SF6 Gas Particle Filter-2.png"),
+          filterImagePath("SF6 Gas Particle Filter-3.png"),
+          filterImagePath("SF6 Gas Particle Filter-4.png")
+        ],
+        alt: "SF6 gas particle filter"
+      },
+      {
+        title: "Stand Alone Filter",
+        image: filterImagePath("Stand Alone Filter.png"),
+        gallery: [
+          filterImagePath("Stand Alone Filter.png"),
+          filterImagePath("Stand Alone Filter-1.png"),
+          filterImagePath("Stand Alone Filter-2.png")
+        ],
+        alt: "Stand alone SF6 gas filter"
+      }
+    ]
   },
   {
     tag: "Instruments",

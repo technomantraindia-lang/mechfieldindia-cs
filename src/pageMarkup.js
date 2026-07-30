@@ -281,12 +281,23 @@ const pageMarkup = `
           </a>
           <a class="product-card" href="pages/prodcut.html?category=portable-recovery-vacuum-units">
             <div class="product-media">
-              <div class="product-img-wrap"><img src="assets/category/Filters &amp; Vacuum Units.png" alt="Filters and Vacuum Units"></div>
+              <div class="product-img-wrap"><img src="assets/products/Portable Recovery Vacuum Units/SFX-10.png" alt="Portable Recovery and Vacuum Units"></div>
             </div>
             <div class="product-body">
               <div class="product-info">
                 <h3>Portable Recovery / Vacuum Units</h3>
                 <p>Portable recovery and vacuum pump systems</p>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="pages/prodcut.html?category=filters-moisture-absorbers">
+            <div class="product-media">
+              <div class="product-img-wrap"><img src="assets/products/Filters &amp; Moisture Absorbers/SF6 Gas Drier Filter Cartridge.png" alt="Filters and Moisture Absorbers"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-info">
+                <h3>Filters &amp; Moisture Absorbers</h3>
+                <p>Drier cartridges and particle filters</p>
               </div>
             </div>
           </a>

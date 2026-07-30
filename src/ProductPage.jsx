@@ -63,8 +63,10 @@ const normalizeProduct = (item, category) => {
 const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Transfer Units/${fileName}`;
 const portableVacuumImagePath = (fileName) => `/assets/products/Portable Recovery Vacuum Units/${fileName}`;
 const filterImagePath = (fileName) => `/assets/products/Filters & Moisture Absorbers/${fileName}`;
-const measuringImagePath = (fileName) => `/assets/products/Measuring Instruments/${fileName}`;
+const measuringImagePath = (fileName) => `/assets/products/Measuring Instruments/${fileName}?v=20260730-measuring`;
 const connectorImagePath = (fileName) => `/assets/products/Gas Connectors & Manifolds/${fileName}`;
+const fillingImagePath = (fileName) => `/assets/products/SF6 Gas Filling Device/${fileName}`;
+const storageTankImagePath = (fileName) => `/assets/products/SF6 Gas Storage Tank/${fileName}`;
 
 const productDetails = (product, category) => {
   const lowerTitle = product.title.toLowerCase();
@@ -435,7 +437,27 @@ const productCategories = [
     text: "Gas filling devices and accessories for RMU, breaker and GIS systems.",
     image: "/assets/category/SF6 Gas Filling Devices.png",
     alt: "SF6 Gas Filling Device",
-    items: ["SF6 Gas Filling Device", "Filling kit/accessories for RMU, Breaker and GIS"]
+    items: [
+      {
+        title: "SF6 Gas Filling Device",
+        image: fillingImagePath("SF6 Gas Filling Device.png"),
+        gallery: [
+          fillingImagePath("SF6 Gas Filling Device.png"),
+          fillingImagePath("SF6 Gas Filling Device-2.png"),
+          fillingImagePath("SF6 Gas Filling Device-3.png")
+        ],
+        alt: "SF6 gas filling device"
+      },
+      {
+        title: "Filling kit/accessories for RMU, Breaker and GIS",
+        image: fillingImagePath("Filling kit/accessories for RMU.png"),
+        gallery: [
+          fillingImagePath("Filling kit/accessories for RMU.png"),
+          fillingImagePath("Filling kit/accessories for RMU-1.png")
+        ],
+        alt: "Filling kit accessories for RMU breaker and GIS"
+      }
+    ]
   },
   {
     tag: "Detection",
@@ -462,7 +484,20 @@ const productCategories = [
     text: "High-pressure storage tanks for secure gas handling and transport.",
     image: "/assets/category/SF6 Gas Storage Tanks.png",
     alt: "SF6 Gas Storage Tank",
-    items: ["150 Ltr", "300 Ltr", "600 Ltr", "1000 Ltr", "2000 Ltr", "4000 Ltr", "8000 Ltr"]
+    items: [
+      "150 Ltr",
+      "300 Ltr",
+      "600 Ltr",
+      "1000 Ltr",
+      "2000 Ltr",
+      {
+        title: "4000 Ltr",
+        image: storageTankImagePath("4000 Ltr.png"),
+        gallery: [storageTankImagePath("4000 Ltr.png")],
+        alt: "4000 Ltr SF6 gas storage tank"
+      },
+      "8000 Ltr"
+    ]
   }
 ];
 
@@ -689,8 +724,8 @@ function ProductDetailListItem({ children, className = "" }) {
 
 function ProductDetailPage({ category, product }) {
   const detail = productDetails(product, category);
-  // Keep product.gallery data available, but show only the primary image for now.
-  const gallery = [product.image];
+  const shouldShowGallery = category.slug === "sf6-gas-filling-device";
+  const gallery = shouldShowGallery && product.gallery?.length ? [...new Set(product.gallery)] : [product.image];
   const hasGalleryControls = gallery.length > 1;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isImagePreviewOpen, setIsImagePreviewOpen] = useState(false);

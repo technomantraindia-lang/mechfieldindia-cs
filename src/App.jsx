@@ -12,6 +12,7 @@ import ClientPage from "./ClientPage.jsx";
 import ContactPage from "./ContactPage.jsx";
 import QuotePopup from "./QuotePopup.jsx";
 import { initScrollAnimations } from "./scrollAnimations.js";
+import { submitWeb3Form } from "./web3Forms.js";
 
 const SF6_SKIP_SELECTOR = "script, style, textarea, select, option, svg, .sf6-mark";
 
@@ -58,15 +59,61 @@ function formatSf6Text(root = document.body) {
 function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const pathname = window.location.pathname.toLowerCase();
-  const isAboutPage = pathname.includes("/pages/about.html");
-  const isProductPage = pathname.includes("/pages/prodcut.html");
-  const isCertificatePage = pathname.includes("/pages/certificates.html");
-  const isClientPage = pathname.includes("/pages/clients.html");
-  const isContactPage = pathname.includes("/pages/contact.html");
+  const cleanPath = pathname.replace(/\/+$/, "") || "/";
+  const legacyRouteMap = {
+    "/pages/about.html": "/about",
+    "/pages/prodcut.html": "/products",
+    "/pages/certificates.html": "/certificates",
+    "/pages/clients.html": "/clients",
+    "/pages/contact.html": "/contact"
+  };
+  const routePath = legacyRouteMap[cleanPath] || cleanPath;
+  const isAboutPage = routePath === "/about";
+  const isProductPage = routePath === "/products";
+  const isCertificatePage = routePath === "/certificates";
+  const isClientPage = routePath === "/clients";
+  const isContactPage = routePath === "/contact";
+
+  useEffect(() => {
+    const cleanRoute = legacyRouteMap[cleanPath];
+    if (!cleanRoute) return;
+
+    window.history.replaceState(null, "", `${cleanRoute}${window.location.search}${window.location.hash}`);
+  }, [cleanPath]);
 
   useLayoutEffect(() => {
     return initScrollAnimations();
   }, [isAboutPage, isProductPage, isCertificatePage, isClientPage, isContactPage]);
+
+  useEffect(() => {
+    const handleStaticFormSubmit = async (event) => {
+      const form = event.target.closest(".premium-message-form");
+      if (!form) return;
+
+      event.preventDefault();
+
+      const button = form.querySelector(".premium-submit-btn");
+      const label = button?.querySelector("span");
+      const previousLabel = label?.textContent;
+
+      if (button) button.disabled = true;
+      if (label) label.textContent = "SENDING...";
+
+      try {
+        await submitWeb3Form(form, "Homepage Contact Form");
+        form.reset();
+        alert("Message sent successfully!");
+      } catch (error) {
+        alert(error.message || "Message could not be sent. Please try again.");
+      } finally {
+        if (button) button.disabled = false;
+        if (label && previousLabel) label.textContent = previousLabel;
+      }
+    };
+
+    document.addEventListener("submit", handleStaticFormSubmit);
+    return () => document.removeEventListener("submit", handleStaticFormSubmit);
+  }, []);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => formatSf6Text());
@@ -82,8 +129,7 @@ function App() {
       const isQuoteTrigger =
         trigger.classList.contains("btn-quote") ||
         trigger.classList.contains("nav-quote-btn") ||
-        text.includes("request a quote") ||
-        text.includes("send enquiry");
+        text.includes("request a quote");
 
       if (!isQuoteTrigger) return;
 

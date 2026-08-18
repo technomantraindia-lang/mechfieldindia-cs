@@ -137,25 +137,25 @@ function Header() {
         </button>
         <nav className="main-nav" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/pages/about.html">About Us</a>
+          <a href="/about">About Us</a>
           <div className="nav-dropdown">
-            <a href="/pages/prodcut.html" className="nav-dropdown-link has-dropdown">Products <Icon name="chevron" /></a>
+            <a href="/products" className="nav-dropdown-link has-dropdown">Products <Icon name="chevron" /></a>
             <div className="nav-dropdown-menu">
               <p className="nav-dropdown-label">Product Categories</p>
-              <a href="/pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
-              <a href="/pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
-              <a href="/pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
-              <a href="/pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a>
-              <a href="/pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
-              <a href="/pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
-              <a href="/pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
-              <a href="/pages/prodcut.html?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
-              <a href="/pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
+              <a href="/products?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
+              <a href="/products?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
+              <a href="/products?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
+              <a href="/products?category=measuring-instruments">Measuring Instruments</a>
+              <a href="/products?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
+              <a href="/products?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
+              <a href="/products?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
+              <a href="/products?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
+              <a href="/products?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
             </div>
           </div>
-          <a href="/pages/certificates.html" className="active">Certificates &amp; Awards</a>
-          <a href="/pages/clients.html">Clients</a>
-          <a href="/pages/contact.html">Contact Us</a>
+          <a href="/certificates" className="active">Certificates &amp; Awards</a>
+          <a href="/clients">Clients</a>
+          <a href="/contact">Contact Us</a>
         </nav>
         <a className="btn btn-quote" href="#">Request a Quote</a>
       </div>
@@ -320,9 +320,9 @@ function CertificatePage() {
               <h2 className="footer-heading">Quick Links</h2>
               <ul className="footer-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/pages/about.html">About Us</a></li>
-                <li><a href="/pages/certificates.html">Certificates</a></li>
-                <li><a href="/pages/prodcut.html">Products</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/certificates">Certificates</a></li>
+                <li><a href="/products">Products</a></li>
                 <li><a href="/#contact">Contact Us</a></li>
               </ul>
             </section>
@@ -330,15 +330,15 @@ function CertificatePage() {
             <section className="footer-col">
               <h2 className="footer-heading">Product Categories</h2>
               <ul className="footer-links">
-                <li><a href="/pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
-                <li><a href="/pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
-                <li><a href="/pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
-                <li><a href="/pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a></li>
-                <li><a href="/pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
-                <li><a href="/pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
-                <li><a href="/pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
-                <li><a href="/pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
-                <li><a href="/pages/prodcut.html?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
+                <li><a href="/products?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
+                <li><a href="/products?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
+                <li><a href="/products?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
+                <li><a href="/products?category=measuring-instruments">Measuring Instruments</a></li>
+                <li><a href="/products?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
+                <li><a href="/products?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
+                <li><a href="/products?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
+                <li><a href="/products?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
+                <li><a href="/products?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
               </ul>
             </section>
 

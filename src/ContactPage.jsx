@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { submitWeb3Form } from "./web3Forms.js";
 
 const mapLink = "https://maps.app.goo.gl/dCzrhQESTXW1nv9Y7";
 
@@ -70,25 +71,25 @@ function Header() {
         </button>
         <nav className="main-nav" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/pages/about.html">About Us</a>
+          <a href="/about">About Us</a>
           <div className="nav-dropdown">
-            <a href="/pages/prodcut.html" className="nav-dropdown-link has-dropdown">Products <Icon name="chevron" /></a>
+            <a href="/products" className="nav-dropdown-link has-dropdown">Products <Icon name="chevron" /></a>
             <div className="nav-dropdown-menu">
               <p className="nav-dropdown-label">Product Categories</p>
-              <a href="/pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
-              <a href="/pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
-              <a href="/pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
-              <a href="/pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a>
-              <a href="/pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
-              <a href="/pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
-              <a href="/pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
-              <a href="/pages/prodcut.html?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
-              <a href="/pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
+              <a href="/products?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
+              <a href="/products?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
+              <a href="/products?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
+              <a href="/products?category=measuring-instruments">Measuring Instruments</a>
+              <a href="/products?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
+              <a href="/products?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
+              <a href="/products?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
+              <a href="/products?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
+              <a href="/products?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
             </div>
           </div>
-          <a href="/pages/certificates.html">Certificates &amp; Awards</a>
-          <a href="/pages/clients.html">Clients</a>
-          <a href="/pages/contact.html" className="active">Contact Us</a>
+          <a href="/certificates">Certificates &amp; Awards</a>
+          <a href="/clients">Clients</a>
+          <a href="/contact" className="active">Contact Us</a>
         </nav>
         <a className="btn btn-quote" href="#">Request a Quote</a>
       </div>
@@ -97,6 +98,8 @@ function Header() {
 }
 
 function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState("");
   const params = new URLSearchParams(window.location.search);
   const inquiryProduct = params.get("product") || "";
   const inquiryCategory = params.get("category") || "";
@@ -107,9 +110,21 @@ function ContactPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    alert("Message sent successfully!");
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+    setFormStatus("");
+
+    try {
+      await submitWeb3Form(form, "Contact Page Form");
+      form.reset();
+      setFormStatus("Thank you. Your message has been sent successfully.");
+    } catch (error) {
+      setFormStatus(error.message || "Message could not be sent. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -229,25 +244,26 @@ function ContactPage() {
                     </div>
 
                     <form className="message-form" onSubmit={handleFormSubmit}>
+                      <input type="hidden" name="subject" value="New Contact Form Submission - Mechfield India" />
                       <div className="form-row">
                         <div className="form-group">
                           <label htmlFor="firstName">First Name *</label>
-                          <input type="text" id="firstName" placeholder="Your first name" required />
+                          <input type="text" id="firstName" name="first_name" placeholder="Your first name" required />
                         </div>
                         <div className="form-group">
                           <label htmlFor="lastName">Last Name *</label>
-                          <input type="text" id="lastName" placeholder="Your last name" required />
+                          <input type="text" id="lastName" name="last_name" placeholder="Your last name" required />
                         </div>
                       </div>
 
                       <div className="form-row">
                         <div className="form-group">
                           <label htmlFor="email">Email Address *</label>
-                          <input type="email" id="email" placeholder="your@email.com" required />
+                          <input type="email" id="email" name="email" placeholder="your@email.com" required />
                         </div>
                         <div className="form-group">
                           <label htmlFor="phone">Phone Number *</label>
-                          <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+                          <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required />
                         </div>
                       </div>
 
@@ -255,12 +271,12 @@ function ContactPage() {
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="productName">Product Name</label>
-                            <input type="text" id="productName" value={inquiryProduct} readOnly />
+                            <input type="text" id="productName" name="product_name" value={inquiryProduct} readOnly />
                           </div>
                           {inquiryCategory && (
                             <div className="form-group">
                               <label htmlFor="productCategory">Category</label>
-                              <input type="text" id="productCategory" value={inquiryCategory} readOnly />
+                              <input type="text" id="productCategory" name="product_category" value={inquiryCategory} readOnly />
                             </div>
                           )}
                         </div>
@@ -268,18 +284,19 @@ function ContactPage() {
 
                       <div className="form-group">
                         <label htmlFor="subject">Subject *</label>
-                        <input type="text" id="subject" placeholder="How can we help you?" defaultValue={defaultSubject} required />
+                        <input type="text" id="subject" name="inquiry_subject" placeholder="How can we help you?" defaultValue={defaultSubject} required />
                       </div>
 
                       <div className="form-group">
                         <label htmlFor="message">Message *</label>
-                        <textarea id="message" rows="5" placeholder="Type your message here..." defaultValue={defaultMessage} required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." defaultValue={defaultMessage} required></textarea>
                       </div>
 
                       <div className="form-footer">
-                        <button type="submit" className="btn btn-orange-fill form-submit-btn">
-                          SEND MESSAGE <Icon name="chevron" />
+                        <button type="submit" className="btn btn-orange-fill form-submit-btn" disabled={isSubmitting}>
+                          {isSubmitting ? "SENDING..." : "SEND MESSAGE"} <Icon name="chevron" />
                         </button>
+                        {formStatus && <p className="form-submit-status">{formStatus}</p>}
                         <div className="form-security-note">
                           <Icon name="lock" />
                           <span>Your information is safe with us.</span>
@@ -381,26 +398,26 @@ function ContactPage() {
               <h2 className="footer-heading">Quick Links</h2>
               <ul className="footer-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/pages/about.html">About Us</a></li>
-                <li><a href="/pages/certificates.html">Certificates</a></li>
-                <li><a href="/pages/prodcut.html">Products</a></li>
-                <li><a href="/pages/clients.html">Clients</a></li>
-                <li><a href="/pages/contact.html">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/certificates">Certificates</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/clients">Clients</a></li>
+                <li><a href="/contact">Contact Us</a></li>
               </ul>
             </section>
 
             <section className="footer-col">
               <h2 className="footer-heading">Product Categories</h2>
               <ul className="footer-links">
-                <li><a href="/pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
-                <li><a href="/pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
-                <li><a href="/pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
-                <li><a href="/pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a></li>
-                <li><a href="/pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
-                <li><a href="/pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
-                <li><a href="/pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
-                <li><a href="/pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
-                <li><a href="/pages/prodcut.html?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
+                <li><a href="/products?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
+                <li><a href="/products?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
+                <li><a href="/products?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
+                <li><a href="/products?category=measuring-instruments">Measuring Instruments</a></li>
+                <li><a href="/products?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
+                <li><a href="/products?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
+                <li><a href="/products?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
+                <li><a href="/products?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
+                <li><a href="/products?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
               </ul>
             </section>
 

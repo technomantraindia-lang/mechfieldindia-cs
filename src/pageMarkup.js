@@ -49,25 +49,25 @@ const pageMarkup = `
       </button>
       <nav class="main-nav" aria-label="Primary navigation">
         <a class="active" href="#">Home</a>
-        <a href="pages/about.html">About Us</a>
+        <a href="/about">About Us</a>
         <div class="nav-dropdown">
-          <a href="pages/prodcut.html" class="nav-dropdown-link has-dropdown">Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <a href="/products" class="nav-dropdown-link has-dropdown">Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
           <div class="nav-dropdown-menu">
             <p class="nav-dropdown-label">Product Categories</p>
-            <a href="pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
-            <a href="pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
-            <a href="pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
-            <a href="pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a>
-            <a href="pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
-            <a href="pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
-            <a href="pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
-            <a href="pages/prodcut.html?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
-            <a href="pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
+            <a href="/products?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a>
+            <a href="/products?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a>
+            <a href="/products?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a>
+            <a href="/products?category=measuring-instruments">Measuring Instruments</a>
+            <a href="/products?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a>
+            <a href="/products?category=sf6-gas-filling-device">SF6 Gas Filling Device</a>
+            <a href="/products?category=sf6-gas-leak-detector">SF6 Gas Leak Detector</a>
+            <a href="/products?category=nabl-calibration-laboratory-services">NABL Calibration Laboratory Services</a>
+            <a href="/products?category=sf6-gas-storage-tank">SF6 Gas Storage Tank</a>
           </div>
         </div>
-        <a href="pages/certificates.html">Certificates &amp; Awards</a>
-        <a href="pages/clients.html">Clients</a>
-        <a href="pages/contact.html">Contact Us</a>
+        <a href="/certificates">Certificates &amp; Awards</a>
+        <a href="/clients">Clients</a>
+        <a href="/contact">Contact Us</a>
       </nav>
       <a class="btn btn-quote" href="#">Request a Quote</a>
     </div>
@@ -88,7 +88,7 @@ const pageMarkup = `
           </h1>
           <p class="copy">Precision engineered solutions for safe, efficient and reliable handling of SF6 gas in power and electrical infrastructure.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="pages/prodcut.html">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="btn btn-primary" href="/products">Explore Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
             <a class="btn btn-outline" href="#">Request a Quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
           </div>
           <div class="hero-points">
@@ -98,7 +98,14 @@ const pageMarkup = `
           </div>
         </div>
         <div class="hero-product-fixed" aria-hidden="true">
-          <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX3000C.png" alt="SF6 Gas Recovery & Transfer Unit SFX3000C">
+          <div class="hero-product-track">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/EVAF-001.png" alt="EVAF-001 SF6 Gas Recovery and Transfer Unit">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/EVAF-002.png" alt="EVAF-002 SF6 Gas Recovery and Transfer Unit">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX-12C T300.png" alt="SFX-12C T300 SF6 Gas Recovery and Transfer Unit">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX1400C.png" alt="SFX1400C SF6 Gas Recovery and Transfer Unit">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX2000C.png" alt="SFX2000C SF6 Gas Recovery and Transfer Unit">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX3000C.png" alt="SFX3000C SF6 Gas Recovery and Transfer Unit">
+          </div>
         </div>
       </div>
     </section>
@@ -205,7 +212,7 @@ const pageMarkup = `
           <h2 id="product-categories-heading">Our <strong>Product Categories</strong></h2>
         </div>
         <div class="product-grid">
-          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-recovery-transfer-units">
+          <a class="product-card" href="/products?category=sf6-gas-recovery-transfer-units">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/SF6 Gas Recovery &amp; Transfer Units.png?v=20260729-category" alt="SF6 Gas Recovery and Transfer Units"></div>
             </div>
@@ -216,7 +223,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-filling-device">
+          <a class="product-card" href="/products?category=sf6-gas-filling-device">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/SF6 Gas Filling Devices.png" alt="SF6 Gas Filling Devices"></div>
             </div>
@@ -227,7 +234,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-storage-tank">
+          <a class="product-card" href="/products?category=sf6-gas-storage-tank">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/SF6 Gas Storage Tanks.png" alt="SF6 Gas Storage Tanks"></div>
             </div>
@@ -238,7 +245,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=measuring-instruments">
+          <a class="product-card" href="/products?category=measuring-instruments">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/Measuring Instruments.png" alt="Measuring Instruments"></div>
             </div>
@@ -249,7 +256,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=gas-connectors-manifolds">
+          <a class="product-card" href="/products?category=gas-connectors-manifolds">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/Gas Connectors &amp; Manifolds.png" alt="Gas Connectors and Manifolds"></div>
             </div>
@@ -260,7 +267,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=sf6-gas-leak-detector">
+          <a class="product-card" href="/products?category=sf6-gas-leak-detector">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/SF6 Gas Leak Detectors.png" alt="SF6 Gas Leak Detectors"></div>
             </div>
@@ -271,7 +278,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=portable-recovery-vacuum-units">
+          <a class="product-card" href="/products?category=portable-recovery-vacuum-units">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/Filters &amp; Vacuum Units.png" alt="Portable Recovery and Vacuum Units"></div>
             </div>
@@ -282,7 +289,7 @@ const pageMarkup = `
               </div>
             </div>
           </a>
-          <a class="product-card" href="pages/prodcut.html?category=filters-moisture-absorbers">
+          <a class="product-card" href="/products?category=filters-moisture-absorbers">
             <div class="product-media">
               <div class="product-img-wrap"><img src="assets/category/Filters &amp; Vacuum Units.png" alt="Filters and Moisture Absorbers"></div>
             </div>
@@ -295,7 +302,7 @@ const pageMarkup = `
           </a>
         </div>
         <div class="products-actions">
-          <a class="btn btn-primary" href="pages/prodcut.html">View All Categories <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          <a class="btn btn-primary" href="/products">View All Categories <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
         </div>
       </div>
     </section>
@@ -1053,26 +1060,26 @@ const pageMarkup = `
           <h2 class="footer-heading">Quick Links</h2>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/pages/about.html">About Us</a></li>
-            <li><a href="/pages/certificates.html">Certificates</a></li>
-            <li><a href="/pages/prodcut.html">Products</a></li>
-            <li><a href="/pages/clients.html">Clients</a></li>
-            <li><a href="/pages/contact.html">Contact Us</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/certificates">Certificates</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/clients">Clients</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </section>
 
         <section class="footer-col">
           <h2 class="footer-heading">Product Categories</h2>
           <ul class="footer-links">
-            <li><a href="/pages/prodcut.html?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
-            <li><a href="/pages/prodcut.html?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
-            <li><a href="/pages/prodcut.html?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
-            <li><a href="/pages/prodcut.html?category=measuring-instruments">Measuring Instruments</a></li>
-            <li><a href="/pages/prodcut.html?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
-            <li><a href="/pages/prodcut.html?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
-            <li><a href="/pages/prodcut.html?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
-            <li><a href="/pages/prodcut.html?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
-            <li><a href="/pages/prodcut.html?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
+            <li><a href="/products?category=sf6-gas-recovery-transfer-units">SF6 Gas Recovery &amp; Transfer Units</a></li>
+            <li><a href="/products?category=portable-recovery-vacuum-units">Portable Recovery / Vacuum Units</a></li>
+            <li><a href="/products?category=filters-moisture-absorbers">Filters &amp; Moisture Absorbers</a></li>
+            <li><a href="/products?category=measuring-instruments">Measuring Instruments</a></li>
+            <li><a href="/products?category=gas-connectors-manifolds">Gas Connectors &amp; Manifolds</a></li>
+            <li><a href="/products?category=sf6-gas-filling-device">SF6 Gas Filling Devices</a></li>
+            <li><a href="/products?category=sf6-gas-leak-detector">SF6 Gas Leak Detectors</a></li>
+            <li><a href="/products?category=sf6-gas-storage-tank">SF6 Gas Storage Tanks</a></li>
+            <li><a href="/products?category=nabl-calibration-laboratory-services">Calibration Services</a></li>
           </ul>
         </section>
 

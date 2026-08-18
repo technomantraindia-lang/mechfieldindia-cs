@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { submitWeb3Form } from "./web3Forms.js";
+
 function PopupIcon({ name }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" };
 
@@ -30,12 +33,26 @@ function PopupIcon({ name }) {
 }
 
 function QuotePopup({ isOpen, onClose }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState("");
+
   if (!isOpen) return null;
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert("Quote request sent successfully!");
-    onClose();
+    const form = event.currentTarget;
+    setIsSubmitting(true);
+    setFormStatus("");
+
+    try {
+      await submitWeb3Form(form, "Request a Quote Popup");
+      form.reset();
+      setFormStatus("Thank you. Your quote request has been sent successfully.");
+    } catch (error) {
+      setFormStatus(error.message || "Quote request could not be sent. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,6 +101,7 @@ function QuotePopup({ isOpen, onClose }) {
           </header>
 
           <form className="quote-popup-form" onSubmit={handleSubmit}>
+            <input type="hidden" name="subject" value="New Quote Request - Mechfield India" />
             <label>
               <PopupIcon name="user" />
               <input type="text" name="name" placeholder="Full Name" required />
@@ -114,17 +132,18 @@ function QuotePopup({ isOpen, onClose }) {
             </label>
             <label className="quote-popup-wide">
               <PopupIcon name="file" />
-              <input type="text" name="subject" placeholder="Subject" required />
+              <input type="text" name="inquiry_subject" placeholder="Subject" required />
             </label>
             <label className="quote-popup-wide quote-popup-message">
               <PopupIcon name="edit" />
               <textarea name="message" placeholder="Message" rows="3" required></textarea>
             </label>
 
-            <button className="quote-popup-submit" type="submit">
-              <span>Send Enquiry</span>
+            <button className="quote-popup-submit" type="submit" disabled={isSubmitting}>
+              <span>{isSubmitting ? "Sending..." : "Send Enquiry"}</span>
               <PopupIcon name="arrow" />
             </button>
+            {formStatus && <p className="quote-popup-status">{formStatus}</p>}
           </form>
 
           <div className="quote-popup-note">

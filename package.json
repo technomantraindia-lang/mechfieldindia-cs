@@ -8,6 +8,7 @@
     "@vitejs/plugin-react": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "sharp": "^0.35.3",
     "three": "^0.185.0",
     "vite": "latest"
   }

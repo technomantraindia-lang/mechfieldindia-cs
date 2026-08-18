@@ -97,16 +97,8 @@ const pageMarkup = `
             <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></svg> Trusted by Experts</span>
           </div>
         </div>
-        <div class="hero-product-carousel" aria-hidden="true">
-          <div class="hero-product-track">
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX3000C.png" alt=""></div>
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX2000C.png" alt=""></div>
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX1400C.png" alt=""></div>
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX-12C T300.png" alt=""></div>
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/EVAF-001.png" alt=""></div>
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/EVAF-002.png" alt=""></div>
-            <div class="hero-product-slide"><img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX3000C.png" alt=""></div>
-          </div>
+        <div class="hero-product-fixed" aria-hidden="true">
+          <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX3000C.png" alt="SF6 Gas Recovery & Transfer Unit SFX3000C">
         </div>
       </div>
     </section>
@@ -325,9 +317,7 @@ const pageMarkup = `
         <div class="why-layout">
           <div class="why-visual">
             <div class="why-image-frame">
-              <div class="sf6-model-viewer" data-sf6-model aria-label="Interactive 3D SF6 gas handling equipment model">
-                <img class="sf6-model-fallback" src="assets/sf6-equipment.png" alt="SF6 gas handling equipment manufactured by Mechfield">
-              </div>
+              <img src="assets/products/SF6 Gas Recovery &amp; Transfer Units/SFX3000C.png" alt="SF6 Gas Recovery and Transfer Unit manufactured by Mechfield">
             </div>
           </div>
           <div class="why-grid">

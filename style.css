@@ -1171,10 +1171,11 @@ svg {
 
 .why-image-frame img {
   width: 100%;
-  height: 380px;
-  object-fit: cover;
+  height: 420px;
+  object-fit: contain;
   object-position: center;
   display: block;
+  background: #fff;
 }
 
 .why-badge {
@@ -4789,53 +4790,9 @@ svg {
   max-height: 560px;
   margin: 0 auto;
   object-fit: contain;
-  filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.58));
-}
-
-.sf6-model-viewer {
-  position: relative;
-  width: min(560px, 100%);
-  height: clamp(300px, 31vw, 430px);
-  margin: -4px auto -12px;
-  cursor: grab;
-  touch-action: none;
-  isolation: isolate;
-  z-index: 5;
-}
-
-.sf6-model-viewer::before {
-  display: none;
-}
-
-.sf6-model-viewer::after {
-  display: none;
-}
-
-.sf6-model-viewer.is-dragging {
-  cursor: grabbing;
-}
-
-.sf6-model-viewer.is-ready .sf6-model-fallback {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.sf6-model-viewer canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   display: block;
-  filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.42));
-}
-
-.sf6-model-fallback {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: opacity 220ms ease, visibility 220ms ease;
+  background: transparent;
+  filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.58));
 }
 
 .why-badge,
@@ -5125,12 +5082,6 @@ svg {
 
   .why-image-frame img {
     max-height: 400px;
-  }
-
-  .sf6-model-viewer {
-    width: min(100%, 420px);
-    height: 330px;
-    margin: -8px auto -10px;
   }
 
   .why-layout::before {
@@ -5702,48 +5653,20 @@ svg {
   z-index: 2;
 }
 
-.hero-product-carousel {
+.hero-product-fixed {
   position: relative;
   z-index: 2;
   justify-self: end;
   width: min(640px, 48vw);
   aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  margin-right: clamp(34px, 5vw, 96px);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
-}
-
-.hero-product-carousel::before {
-  display: none;
-}
-
-.hero-product-track {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  width: 700%;
-  height: 100%;
-  animation: heroProductSlide 21s ease-in-out infinite;
-}
-
-.hero-product-slide {
-  flex: 0 0 14.2858%;
   display: grid;
   place-items: center;
-  padding: clamp(2px, 0.6vw, 10px);
-  border: 0;
-  outline: 0;
-  background: transparent;
+  margin-right: clamp(34px, 5vw, 96px);
 }
 
-.hero-product-slide img {
-  width: 108%;
-  height: 108%;
+.hero-product-fixed img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border: 0;
   outline: 0;
@@ -5752,55 +5675,12 @@ svg {
   filter: drop-shadow(0 28px 30px rgba(8, 42, 60, 0.26));
 }
 
-@keyframes heroProductSlide {
-  0%,
-  10% {
-    transform: translateX(0);
-  }
-
-  15%,
-  25% {
-    transform: translateX(-14.2858%);
-  }
-
-  30%,
-  40% {
-    transform: translateX(-28.5716%);
-  }
-
-  45%,
-  55% {
-    transform: translateX(-42.8574%);
-  }
-
-  60%,
-  70% {
-    transform: translateX(-57.1432%);
-  }
-
-  75%,
-  85% {
-    transform: translateX(-71.429%);
-  }
-
-  90%,
-  100% {
-    transform: translateX(-85.7148%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-product-track {
-    animation: none;
-  }
-}
-
 @media (max-width: 1100px) {
   .app-shell:not(.product-page-shell) .hero-inner {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .hero-product-carousel {
+  .hero-product-fixed {
     justify-self: start;
     width: min(460px, 82vw);
     margin-left: clamp(16px, 3vw, 32px);
@@ -5859,21 +5739,14 @@ svg {
     max-width: 330px;
   }
 
-  .hero-product-carousel {
+  .hero-product-fixed {
     width: min(74vw, 260px);
     margin: 6px auto -4px;
-    border-radius: 0;
-    -webkit-mask-image: none;
-    mask-image: none;
   }
 
-  .hero-product-slide {
-    padding: 4px;
-  }
-
-  .hero-product-slide img {
-    width: 104%;
-    height: 104%;
-    filter: drop-shadow(0 18px 20px rgba(8, 42, 60, 0.22));
+  .hero-product-fixed img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 18px 22px rgba(8, 42, 60, 0.22));
   }
 }

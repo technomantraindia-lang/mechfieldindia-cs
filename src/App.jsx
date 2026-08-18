@@ -305,13 +305,6 @@ function App() {
       setupTestimonials();
     }
 
-    // ── 3D SF6 equipment model (homepage only) ──
-    if (!isAboutPage && !isProductPage && !isCertificatePage && !isClientPage && !isContactPage) {
-      import("./sf6-model.js").then(({ initSf6Model }) => {
-        initSf6Model();
-      });
-    }
-
     // ── Exclusive FAQ Accordion Toggle ──
     const handleFAQClick = (event) => {
       const summary = event.target.closest(".faq-item summary");

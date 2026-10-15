@@ -102,7 +102,7 @@ const pageMarkup = `
             <img src="assets/products/SF6 Gas Recovery & Transfer Units/EVAF-001.png" alt="EVAF-001 SF6 Gas Recovery and Transfer Unit">
             <img src="assets/products/SF6 Gas Recovery & Transfer Units/EVAF-002.png" alt="EVAF-002 SF6 Gas Recovery and Transfer Unit">
             <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX-12C T300.png" alt="SFX-12C T300 SF6 Gas Recovery and Transfer Unit">
-            <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX1400C.png" alt="SFX1400C SF6 Gas Recovery and Transfer Unit">
+            <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX1400C.png?v=20260818-sfx1400c" alt="SFX1400C SF6 Gas Recovery and Transfer Unit">
             <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX2000C.png" alt="SFX2000C SF6 Gas Recovery and Transfer Unit">
             <img src="assets/products/SF6 Gas Recovery & Transfer Units/SFX3000C.png" alt="SFX3000C SF6 Gas Recovery and Transfer Unit">
           </div>

@@ -60,7 +60,7 @@ const normalizeProduct = (item, category) => {
   };
 };
 
-const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Transfer Units/${fileName}`;
+const productImagePath = (fileName) => `/assets/products/SF6 Gas Recovery & Transfer Units/${fileName}?v=20260818-sf6`;
 const portableVacuumImagePath = (fileName) => `/assets/products/Portable Recovery Vacuum Units/${fileName}`;
 const filterImagePath = (fileName) => `/assets/products/Filters & Moisture Absorbers/${fileName}`;
 const measuringImagePath = (fileName) => `/assets/products/Measuring Instruments/${fileName}?v=20260730-measuring`;
